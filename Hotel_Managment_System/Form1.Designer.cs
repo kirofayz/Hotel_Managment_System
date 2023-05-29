@@ -37,36 +37,38 @@ namespace Hotel_Managment_System
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(215, 117);
+            this.label1.Location = new System.Drawing.Point(251, 144);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(36, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kero";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(358, 78);
+            this.button1.Location = new System.Drawing.Point(319, 13);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 52);
+            this.button1.Size = new System.Drawing.Size(140, 64);
             this.button1.TabIndex = 1;
             this.button1.Text = "zeyad";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(415, 162);
+            this.button2.Location = new System.Drawing.Point(484, 199);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 52);
+            this.button2.Size = new System.Drawing.Size(140, 64);
             this.button2.TabIndex = 2;
             this.button2.Text = "zeyad";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(700, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
