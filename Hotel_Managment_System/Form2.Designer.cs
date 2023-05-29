@@ -1,7 +1,7 @@
 ﻿
 namespace Hotel_Managment_System
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -34,36 +34,21 @@ namespace Hotel_Managment_System
             // 
             // comboBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(251, 144);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kero";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(166, 186);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(1041, 24);
+            this.comboBox1.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(319, 13);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 64);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "zeyad";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // Form1
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ClientSize = new System.Drawing.Size(1408, 504);
+            this.Controls.Add(this.comboBox1);
+            this.Name = "Form2";
+            this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 
         }
@@ -73,4 +58,3 @@ namespace Hotel_Managment_System
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }
-
