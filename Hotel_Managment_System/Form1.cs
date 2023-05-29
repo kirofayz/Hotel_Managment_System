@@ -16,5 +16,18 @@ namespace Hotel_Managment_System
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
+            var user = context.Users.Select(u => u.UserName);
+
+            foreach (var item in user)
+            {
+                comboBox1.Items.Add(item);
+            }
+
+            
+        }
     }
 }
