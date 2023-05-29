@@ -46,7 +46,7 @@ namespace Hotel_Managment_System
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(328, 103);
+            this.button1.Location = new System.Drawing.Point(358, 78);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 52);
             this.button1.TabIndex = 1;
@@ -55,7 +55,7 @@ namespace Hotel_Managment_System
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(328, 188);
+            this.button2.Location = new System.Drawing.Point(415, 162);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 52);
             this.button2.TabIndex = 2;
