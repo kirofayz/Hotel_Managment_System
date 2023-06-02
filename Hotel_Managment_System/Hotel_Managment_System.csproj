@@ -58,11 +58,23 @@
     <Compile Include="Client.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Login\LoginForm.cs">
+    <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Load.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Load.Designer.cs">
+      <DependentUpon>Load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="HotelDB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -93,8 +105,14 @@
     <Compile Include="User.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Login\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Load.resx">
+      <DependentUpon>Load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,6 +122,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="HotelDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -137,6 +156,8 @@
       <DependentUpon>HotelDB.edmx</DependentUpon>
       <LastGenOutput>HotelDB.cs</LastGenOutput>
     </Content>
+    <Content Include="Images\Hotel Logo.png" />
+    <None Include="Resources\Hotel Logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
