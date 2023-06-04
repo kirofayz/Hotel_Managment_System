@@ -65,6 +65,9 @@ namespace Hotel_Managment_System.Forms
         private void Room_btn_Click(object sender, EventArgs e)
         {
             MovePanel(Room_btn);
+            userControlRooms1.Show();
+            settings1.Hide();
+            reports1.Hide();
         }
 
         private void Reservation_btn_Click(object sender, EventArgs e)
