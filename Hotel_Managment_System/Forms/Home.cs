@@ -68,11 +68,17 @@ namespace Hotel_Managment_System.Forms
             userControlRooms1.Show();
             settings1.Hide();
             reports1.Hide();
+            userControlReservation1.Hide();
         }
 
         private void Reservation_btn_Click(object sender, EventArgs e)
         {
             MovePanel(Reservation_btn);
+            userControlReservation1.Show();
+            reports1.Hide();
+            settings1.Hide();
+            userControlRooms1.Hide();
+
         }
 
         private void Reports_btn_Click(object sender, EventArgs e)
@@ -80,6 +86,8 @@ namespace Hotel_Managment_System.Forms
             MovePanel(Reports_btn);
             settings1.Hide();
             reports1.Show();
+            userControlReservation1.Hide();
+            userControlRooms1.Hide();
         }
 
         private void Settings_btn_Click(object sender, EventArgs e)
@@ -87,7 +95,8 @@ namespace Hotel_Managment_System.Forms
             MovePanel(Settings_btn);
             reports1.Hide();
             settings1.Show();
-
+            userControlReservation1.Hide();
+            userControlRooms1.Hide();
         }
 
         private void Pnl_Slide_Paint(object sender, PaintEventArgs e)
