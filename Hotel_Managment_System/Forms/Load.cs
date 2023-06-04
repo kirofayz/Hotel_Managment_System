@@ -28,5 +28,10 @@ namespace Hotel_Managment_System.Forms
                 this.Hide();
             }
         }
+
+        private void Load_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

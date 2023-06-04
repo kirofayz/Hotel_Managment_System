@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_Managment_System
+namespace CalendarPlannerExample
 {
     static class Program
     {
@@ -16,8 +15,7 @@ namespace Hotel_Managment_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Forms.Home());
-            Application.Run(new Forms.Home());
+            Application.Run(new Form2());
         }
     }
 }

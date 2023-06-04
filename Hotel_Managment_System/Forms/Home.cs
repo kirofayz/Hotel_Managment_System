@@ -54,6 +54,7 @@ namespace Hotel_Managment_System.Forms
         private void Dashboard_btn_Click(object sender, EventArgs e)
         {
             MovePanel(Dashboard_btn);
+            
         }
 
         private void Client_btn_Click(object sender, EventArgs e)
@@ -74,14 +75,29 @@ namespace Hotel_Managment_System.Forms
         private void Reports_btn_Click(object sender, EventArgs e)
         {
             MovePanel(Reports_btn);
+            settings1.Hide();
+            reports1.Show();
         }
 
         private void Settings_btn_Click(object sender, EventArgs e)
         {
             MovePanel(Settings_btn);
+            reports1.Hide();
+            settings1.Show();
+
         }
 
         private void Pnl_Slide_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SettingsControl_Load(object sender, EventArgs e)
         {
 
         }

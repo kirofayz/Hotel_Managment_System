@@ -32,36 +32,39 @@ namespace Hotel_Managment_System.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelDateTime = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Name_lbl = new System.Windows.Forms.Label();
-            this.Dashboard_btn = new System.Windows.Forms.Button();
-            this.Client_btn = new System.Windows.Forms.Button();
-            this.Room_btn = new System.Windows.Forms.Button();
-            this.Reservation_btn = new System.Windows.Forms.Button();
-            this.Reports_btn = new System.Windows.Forms.Button();
-            this.Settings_btn = new System.Windows.Forms.Button();
             this.Pnl_Slide = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Name_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.labelDateTime = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Settings_btn = new System.Windows.Forms.Button();
+            this.Reports_btn = new System.Windows.Forms.Button();
+            this.Reservation_btn = new System.Windows.Forms.Button();
+            this.Room_btn = new System.Windows.Forms.Button();
+            this.Client_btn = new System.Windows.Forms.Button();
+            this.Dashboard_btn = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.settings1 = new Hotel_Managment_System.Controls.Settings();
+            this.reports1 = new Hotel_Managment_System.Controls.Reports();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(131)))), ((int)(((byte)(136)))));
             this.panel1.Controls.Add(this.Pnl_Slide);
             this.panel1.Controls.Add(this.Settings_btn);
             this.panel1.Controls.Add(this.Reports_btn);
@@ -73,83 +76,29 @@ namespace Hotel_Managment_System.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(323, 757);
+            this.panel1.Size = new System.Drawing.Size(279, 757);
             this.panel1.TabIndex = 0;
+            // 
+            // Pnl_Slide
+            // 
+            this.Pnl_Slide.BackColor = System.Drawing.Color.White;
+            this.Pnl_Slide.Location = new System.Drawing.Point(12, 214);
+            this.Pnl_Slide.Name = "Pnl_Slide";
+            this.Pnl_Slide.Size = new System.Drawing.Size(10, 71);
+            this.Pnl_Slide.TabIndex = 0;
+            this.Pnl_Slide.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_Slide_Paint);
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(131)))), ((int)(((byte)(136)))));
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(323, 193);
+            this.panel2.Size = new System.Drawing.Size(279, 193);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
-            this.panel3.Controls.Add(this.Name_lbl);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(323, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1371, 193);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panel4.Controls.Add(this.labelDateTime);
-            this.panel4.Controls.Add(this.linkLabel1);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1371, 100);
-            this.panel4.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1219, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.ForeColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(1288, 62);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(68, 21);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "LogOut";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(47, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(176, 115);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
             // 
             // label6
             // 
@@ -163,29 +112,18 @@ namespace Hotel_Managment_System.Forms
             this.label6.TabIndex = 2;
             this.label6.Text = "Fleet Club Hotel";
             // 
-            // labelDateTime
+            // panel3
             // 
-            this.labelDateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDateTime.AutoSize = true;
-            this.labelDateTime.Font = new System.Drawing.Font("Century Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDateTime.ForeColor = System.Drawing.Color.White;
-            this.labelDateTime.Location = new System.Drawing.Point(10, 62);
-            this.labelDateTime.Name = "labelDateTime";
-            this.labelDateTime.Size = new System.Drawing.Size(31, 34);
-            this.labelDateTime.TabIndex = 3;
-            this.labelDateTime.Text = "?";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(19, 141);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 30);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Welcome :";
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(131)))), ((int)(((byte)(136)))));
+            this.panel3.Controls.Add(this.Name_lbl);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(279, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1415, 193);
+            this.panel3.TabIndex = 1;
             // 
             // Name_lbl
             // 
@@ -199,90 +137,86 @@ namespace Hotel_Managment_System.Forms
             this.Name_lbl.TabIndex = 5;
             this.Name_lbl.Text = "?";
             // 
-            // Dashboard_btn
+            // label1
             // 
-            this.Dashboard_btn.FlatAppearance.BorderSize = 0;
-            this.Dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Dashboard_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dashboard_btn.ForeColor = System.Drawing.Color.White;
-            this.Dashboard_btn.Image = ((System.Drawing.Image)(resources.GetObject("Dashboard_btn.Image")));
-            this.Dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Dashboard_btn.Location = new System.Drawing.Point(26, 214);
-            this.Dashboard_btn.Name = "Dashboard_btn";
-            this.Dashboard_btn.Size = new System.Drawing.Size(276, 71);
-            this.Dashboard_btn.TabIndex = 1;
-            this.Dashboard_btn.Text = "     Dashboard";
-            this.Dashboard_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Dashboard_btn.UseVisualStyleBackColor = true;
-            this.Dashboard_btn.Click += new System.EventHandler(this.Dashboard_btn_Click);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(19, 141);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 30);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Welcome :";
             // 
-            // Client_btn
+            // panel4
             // 
-            this.Client_btn.FlatAppearance.BorderSize = 0;
-            this.Client_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Client_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Client_btn.ForeColor = System.Drawing.Color.White;
-            this.Client_btn.Image = ((System.Drawing.Image)(resources.GetObject("Client_btn.Image")));
-            this.Client_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Client_btn.Location = new System.Drawing.Point(26, 300);
-            this.Client_btn.Name = "Client_btn";
-            this.Client_btn.Size = new System.Drawing.Size(276, 71);
-            this.Client_btn.TabIndex = 2;
-            this.Client_btn.Text = "         Client";
-            this.Client_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Client_btn.UseVisualStyleBackColor = true;
-            this.Client_btn.Click += new System.EventHandler(this.Client_btn_Click);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel4.Controls.Add(this.labelDateTime);
+            this.panel4.Controls.Add(this.linkLabel1);
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1415, 100);
+            this.panel4.TabIndex = 0;
             // 
-            // Room_btn
+            // labelDateTime
             // 
-            this.Room_btn.FlatAppearance.BorderSize = 0;
-            this.Room_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Room_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Room_btn.ForeColor = System.Drawing.Color.White;
-            this.Room_btn.Image = ((System.Drawing.Image)(resources.GetObject("Room_btn.Image")));
-            this.Room_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Room_btn.Location = new System.Drawing.Point(26, 388);
-            this.Room_btn.Name = "Room_btn";
-            this.Room_btn.Size = new System.Drawing.Size(276, 71);
-            this.Room_btn.TabIndex = 3;
-            this.Room_btn.Text = "         Room";
-            this.Room_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Room_btn.UseVisualStyleBackColor = true;
-            this.Room_btn.Click += new System.EventHandler(this.Room_btn_Click);
+            this.labelDateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDateTime.AutoSize = true;
+            this.labelDateTime.Font = new System.Drawing.Font("Century Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDateTime.ForeColor = System.Drawing.Color.White;
+            this.labelDateTime.Location = new System.Drawing.Point(10, 62);
+            this.labelDateTime.Name = "labelDateTime";
+            this.labelDateTime.Size = new System.Drawing.Size(31, 34);
+            this.labelDateTime.TabIndex = 3;
+            this.labelDateTime.Text = "?";
             // 
-            // Reservation_btn
+            // linkLabel1
             // 
-            this.Reservation_btn.FlatAppearance.BorderSize = 0;
-            this.Reservation_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Reservation_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reservation_btn.ForeColor = System.Drawing.Color.White;
-            this.Reservation_btn.Image = ((System.Drawing.Image)(resources.GetObject("Reservation_btn.Image")));
-            this.Reservation_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reservation_btn.Location = new System.Drawing.Point(26, 476);
-            this.Reservation_btn.Name = "Reservation_btn";
-            this.Reservation_btn.Size = new System.Drawing.Size(276, 71);
-            this.Reservation_btn.TabIndex = 4;
-            this.Reservation_btn.Text = "        Reservation";
-            this.Reservation_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Reservation_btn.UseVisualStyleBackColor = true;
-            this.Reservation_btn.Click += new System.EventHandler(this.Reservation_btn_Click);
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(1332, 62);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(68, 21);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "LogOut";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // Reports_btn
+            // panel6
             // 
-            this.Reports_btn.FlatAppearance.BorderSize = 0;
-            this.Reports_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Reports_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reports_btn.ForeColor = System.Drawing.Color.White;
-            this.Reports_btn.Image = ((System.Drawing.Image)(resources.GetObject("Reports_btn.Image")));
-            this.Reports_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reports_btn.Location = new System.Drawing.Point(26, 571);
-            this.Reports_btn.Name = "Reports_btn";
-            this.Reports_btn.Size = new System.Drawing.Size(276, 71);
-            this.Reports_btn.TabIndex = 5;
-            this.Reports_btn.Text = "        Reports";
-            this.Reports_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Reports_btn.UseVisualStyleBackColor = true;
-            this.Reports_btn.Click += new System.EventHandler(this.Reports_btn_Click);
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel6.Controls.Add(this.reports1);
+            this.panel6.Controls.Add(this.settings1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(279, 193);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1415, 564);
+            this.panel6.TabIndex = 2;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1263, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Settings_btn
             // 
@@ -301,26 +235,119 @@ namespace Hotel_Managment_System.Forms
             this.Settings_btn.UseVisualStyleBackColor = true;
             this.Settings_btn.Click += new System.EventHandler(this.Settings_btn_Click);
             // 
-            // Pnl_Slide
+            // Reports_btn
             // 
-            this.Pnl_Slide.BackColor = System.Drawing.Color.White;
-            this.Pnl_Slide.Location = new System.Drawing.Point(12, 214);
-            this.Pnl_Slide.Name = "Pnl_Slide";
-            this.Pnl_Slide.Size = new System.Drawing.Size(10, 71);
-            this.Pnl_Slide.TabIndex = 0;
-            this.Pnl_Slide.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_Slide_Paint);
+            this.Reports_btn.FlatAppearance.BorderSize = 0;
+            this.Reports_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reports_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reports_btn.ForeColor = System.Drawing.Color.White;
+            this.Reports_btn.Image = ((System.Drawing.Image)(resources.GetObject("Reports_btn.Image")));
+            this.Reports_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reports_btn.Location = new System.Drawing.Point(26, 571);
+            this.Reports_btn.Name = "Reports_btn";
+            this.Reports_btn.Size = new System.Drawing.Size(276, 71);
+            this.Reports_btn.TabIndex = 5;
+            this.Reports_btn.Text = "        Reports";
+            this.Reports_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Reports_btn.UseVisualStyleBackColor = true;
+            this.Reports_btn.Click += new System.EventHandler(this.Reports_btn_Click);
             // 
-            // panel6
+            // Reservation_btn
             // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(323, 193);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1371, 564);
-            this.panel6.TabIndex = 2;
+            this.Reservation_btn.FlatAppearance.BorderSize = 0;
+            this.Reservation_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reservation_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reservation_btn.ForeColor = System.Drawing.Color.White;
+            this.Reservation_btn.Image = ((System.Drawing.Image)(resources.GetObject("Reservation_btn.Image")));
+            this.Reservation_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reservation_btn.Location = new System.Drawing.Point(26, 476);
+            this.Reservation_btn.Name = "Reservation_btn";
+            this.Reservation_btn.Size = new System.Drawing.Size(276, 71);
+            this.Reservation_btn.TabIndex = 4;
+            this.Reservation_btn.Text = "        Reservation";
+            this.Reservation_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Reservation_btn.UseVisualStyleBackColor = true;
+            this.Reservation_btn.Click += new System.EventHandler(this.Reservation_btn_Click);
             // 
-            // timer1
+            // Room_btn
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.Room_btn.FlatAppearance.BorderSize = 0;
+            this.Room_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Room_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Room_btn.ForeColor = System.Drawing.Color.White;
+            this.Room_btn.Image = ((System.Drawing.Image)(resources.GetObject("Room_btn.Image")));
+            this.Room_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Room_btn.Location = new System.Drawing.Point(26, 388);
+            this.Room_btn.Name = "Room_btn";
+            this.Room_btn.Size = new System.Drawing.Size(276, 71);
+            this.Room_btn.TabIndex = 3;
+            this.Room_btn.Text = "         Room";
+            this.Room_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Room_btn.UseVisualStyleBackColor = true;
+            this.Room_btn.Click += new System.EventHandler(this.Room_btn_Click);
+            // 
+            // Client_btn
+            // 
+            this.Client_btn.FlatAppearance.BorderSize = 0;
+            this.Client_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Client_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Client_btn.ForeColor = System.Drawing.Color.White;
+            this.Client_btn.Image = ((System.Drawing.Image)(resources.GetObject("Client_btn.Image")));
+            this.Client_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Client_btn.Location = new System.Drawing.Point(26, 300);
+            this.Client_btn.Name = "Client_btn";
+            this.Client_btn.Size = new System.Drawing.Size(276, 71);
+            this.Client_btn.TabIndex = 2;
+            this.Client_btn.Text = "         Client";
+            this.Client_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Client_btn.UseVisualStyleBackColor = true;
+            this.Client_btn.Click += new System.EventHandler(this.Client_btn_Click);
+            // 
+            // Dashboard_btn
+            // 
+            this.Dashboard_btn.FlatAppearance.BorderSize = 0;
+            this.Dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dashboard_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboard_btn.ForeColor = System.Drawing.Color.White;
+            this.Dashboard_btn.Image = ((System.Drawing.Image)(resources.GetObject("Dashboard_btn.Image")));
+            this.Dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Dashboard_btn.Location = new System.Drawing.Point(26, 214);
+            this.Dashboard_btn.Name = "Dashboard_btn";
+            this.Dashboard_btn.Size = new System.Drawing.Size(276, 71);
+            this.Dashboard_btn.TabIndex = 1;
+            this.Dashboard_btn.Text = "     Dashboard";
+            this.Dashboard_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Dashboard_btn.UseVisualStyleBackColor = true;
+            this.Dashboard_btn.Click += new System.EventHandler(this.Dashboard_btn_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(47, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(176, 115);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // settings1
+            // 
+            this.settings1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.settings1.Font = new System.Drawing.Font("Century Gothic", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.settings1.Location = new System.Drawing.Point(16, -2);
+            this.settings1.Name = "settings1";
+            this.settings1.Size = new System.Drawing.Size(1371, 563);
+            this.settings1.TabIndex = 0;
+            this.settings1.Visible = false;
+            // 
+            // reports1
+            // 
+            this.reports1.Font = new System.Drawing.Font("Century Gothic", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.reports1.Location = new System.Drawing.Point(29, 40);
+            this.reports1.Name = "reports1";
+            this.reports1.Size = new System.Drawing.Size(1167, 492);
+            this.reports1.TabIndex = 1;
+            this.reports1.Visible = false;
             // 
             // Home
             // 
@@ -345,6 +372,7 @@ namespace Hotel_Managment_System.Forms
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -373,5 +401,7 @@ namespace Hotel_Managment_System.Forms
         private System.Windows.Forms.Panel Pnl_Slide;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Timer timer1;
+        private Controls.Settings settings1;
+        private Controls.Reports reports1;
     }
 }
