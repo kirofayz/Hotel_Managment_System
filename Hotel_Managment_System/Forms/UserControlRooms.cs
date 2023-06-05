@@ -16,5 +16,10 @@ namespace Hotel_Managment_System.Forms
         {
             InitializeComponent();
         }
+
+        private void UserControlRooms_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

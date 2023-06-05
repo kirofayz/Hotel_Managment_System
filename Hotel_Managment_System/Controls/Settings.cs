@@ -111,5 +111,7 @@ namespace Hotel_Managment_System.Controls
             dataGridViewUser.DataSource = query.ToList();
             dataGridViewUser.Columns["ID"].Visible = false;
         }
+
+       
     }
 }

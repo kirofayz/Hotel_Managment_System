@@ -16,5 +16,15 @@ namespace Hotel_Managment_System.Forms
         {
             InitializeComponent();
         }
+
+        private void tabPageUpdateReservation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserControlReservation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -50,11 +50,11 @@ namespace Hotel_Managment_System.Forms
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.userControlReservation1 = new Hotel_Managment_System.Forms.UserControlReservation();
             this.userControlRooms1 = new Hotel_Managment_System.Forms.UserControlRooms();
             this.reports1 = new Hotel_Managment_System.Controls.Reports();
             this.settings1 = new Hotel_Managment_System.Controls.Settings();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.userControlReservation1 = new Hotel_Managment_System.Forms.UserControlReservation();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -212,7 +212,7 @@ namespace Hotel_Managment_System.Forms
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(41, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 26);
+            this.label6.Size = new System.Drawing.Size(235, 32);
             this.label6.TabIndex = 2;
             this.label6.Text = "Fleet Club Hotel";
             // 
@@ -247,7 +247,7 @@ namespace Hotel_Managment_System.Forms
             this.Name_lbl.ForeColor = System.Drawing.Color.White;
             this.Name_lbl.Location = new System.Drawing.Point(154, 142);
             this.Name_lbl.Name = "Name_lbl";
-            this.Name_lbl.Size = new System.Drawing.Size(21, 24);
+            this.Name_lbl.Size = new System.Drawing.Size(26, 29);
             this.Name_lbl.TabIndex = 5;
             this.Name_lbl.Text = "?";
             // 
@@ -259,7 +259,7 @@ namespace Hotel_Managment_System.Forms
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(19, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.Size = new System.Drawing.Size(136, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "Welcome :";
             // 
@@ -283,7 +283,7 @@ namespace Hotel_Managment_System.Forms
             this.labelDateTime.ForeColor = System.Drawing.Color.White;
             this.labelDateTime.Location = new System.Drawing.Point(10, 62);
             this.labelDateTime.Name = "labelDateTime";
-            this.labelDateTime.Size = new System.Drawing.Size(25, 26);
+            this.labelDateTime.Size = new System.Drawing.Size(32, 32);
             this.labelDateTime.TabIndex = 3;
             this.labelDateTime.Text = "?";
             // 
@@ -299,7 +299,7 @@ namespace Hotel_Managment_System.Forms
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(1332, 62);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(61, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(70, 20);
             this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "LogOut";
@@ -329,6 +329,16 @@ namespace Hotel_Managment_System.Forms
             this.panel6.Size = new System.Drawing.Size(1415, 564);
             this.panel6.TabIndex = 2;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // userControlReservation1
+            // 
+            this.userControlReservation1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userControlReservation1.Location = new System.Drawing.Point(6, 69);
+            this.userControlReservation1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlReservation1.Name = "userControlReservation1";
+            this.userControlReservation1.Size = new System.Drawing.Size(1159, 461);
+            this.userControlReservation1.TabIndex = 7;
+            this.userControlReservation1.Visible = false;
             // 
             // userControlRooms1
             // 
@@ -363,18 +373,9 @@ namespace Hotel_Managment_System.Forms
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // userControlReservation1
-            // 
-            this.userControlReservation1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.userControlReservation1.Location = new System.Drawing.Point(6, 69);
-            this.userControlReservation1.Name = "userControlReservation1";
-            this.userControlReservation1.Size = new System.Drawing.Size(1246, 495);
-            this.userControlReservation1.TabIndex = 7;
-            this.userControlReservation1.Visible = false;
-            // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1694, 757);

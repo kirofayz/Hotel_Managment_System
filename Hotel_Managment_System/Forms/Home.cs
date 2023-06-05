@@ -16,7 +16,7 @@ namespace Hotel_Managment_System.Forms
         {
             InitializeComponent();
         }
-        public string Name { get; set; }
+       
         private void MovePanel(Control btn)
         {
             Pnl_Slide.Top = btn.Top;
