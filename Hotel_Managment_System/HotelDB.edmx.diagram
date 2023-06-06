@@ -13,6 +13,7 @@
         <AssociationConnector Association="HotelManagementSystemModel.fk_ClientReservation" ManuallyRouted="false" />
         <AssociationConnector Association="HotelManagementSystemModel.fk_RoomReservation" ManuallyRouted="false" />
         <AssociationConnector Association="HotelManagementSystemModel.fk_UserReservation" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HotelManagementSystemModel.DataStorage" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

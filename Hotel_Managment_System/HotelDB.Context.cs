@@ -30,5 +30,6 @@ namespace Hotel_Managment_System
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<DataStorage> DataStorages { get; set; }
     }
 }

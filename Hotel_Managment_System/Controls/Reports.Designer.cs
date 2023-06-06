@@ -65,6 +65,7 @@ namespace Hotel_Managment_System.Controls
             this.Addbtn.TabIndex = 6;
             this.Addbtn.Text = "Clients Reports";
             this.Addbtn.UseVisualStyleBackColor = false;
+            this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
             // button1
             // 
@@ -81,6 +82,7 @@ namespace Hotel_Managment_System.Controls
             this.button1.TabIndex = 7;
             this.button1.Text = "Rooms Reports";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -114,6 +116,7 @@ namespace Hotel_Managment_System.Controls
             this.button3.TabIndex = 8;
             this.button3.Text = "Reservation Reports";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -130,6 +133,7 @@ namespace Hotel_Managment_System.Controls
             this.button4.TabIndex = 11;
             this.button4.Text = "Monthly Reports";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -146,6 +150,7 @@ namespace Hotel_Managment_System.Controls
             this.button5.TabIndex = 10;
             this.button5.Text = "Dialy Revenues";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Reports
             // 
@@ -161,6 +166,7 @@ namespace Hotel_Managment_System.Controls
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Name = "Reports";
             this.Size = new System.Drawing.Size(1167, 492);
+            this.Load += new System.EventHandler(this.Reports_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

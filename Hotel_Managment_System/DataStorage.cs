@@ -12,18 +12,14 @@ namespace Hotel_Managment_System
     using System;
     using System.Collections.Generic;
     
-    public partial class Reservation
+    public partial class DataStorage
     {
         public int ReservationID { get; set; }
-        public System.DateTime CheckInDate { get; set; }
-        public System.DateTime CheckOutDate { get; set; }
+        public Nullable<System.DateTime> CheckInDate { get; set; }
+        public Nullable<System.DateTime> CheckOutDate { get; set; }
         public string PaymentMethod { get; set; }
-        public int UserID { get; set; }
-        public int ClientID { get; set; }
-        public int RoomID { get; set; }
-    
-        public virtual Client Client { get; set; }
-        public virtual Room Room { get; set; }
-        public virtual User User { get; set; }
+        public Nullable<int> UserID { get; set; }
+        public Nullable<int> ClientID { get; set; }
+        public Nullable<int> RoomID { get; set; }
     }
 }

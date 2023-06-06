@@ -18,6 +18,7 @@ namespace Hotel_Managment_System
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Forms.Home());
             Application.Run(new Forms.Home());
+            //Application.Run(new Forms.ReportsForm());
         }
     }
 }

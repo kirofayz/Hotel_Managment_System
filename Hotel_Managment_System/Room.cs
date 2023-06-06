@@ -21,10 +21,10 @@ namespace Hotel_Managment_System
         }
     
         public int RoomID { get; set; }
-        public Nullable<int> RoomNo { get; set; }
+        public int RoomNo { get; set; }
         public string RoomType { get; set; }
         public string RoomFree { get; set; }
-        public Nullable<int> RoomPrice { get; set; }
+        public int RoomPrice { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Reservation> Reservations { get; set; }
