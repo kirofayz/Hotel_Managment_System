@@ -112,11 +112,17 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportsForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Forms\UserControlReservation.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\ReportsForm.Designer.cs">
-      <DependentUpon>ReportsForm.cs</DependentUpon>
+    <Compile Include="Forms\UserControlReservation.Designer.cs">
+      <DependentUpon>UserControlReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlRooms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlRooms.Designer.cs">
+      <DependentUpon>UserControlRooms.cs</DependentUpon>
     </Compile>
     <Compile Include="HotelDB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -198,8 +204,11 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportsForm.resx">
-      <DependentUpon>ReportsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserControlReservation.resx">
+      <DependentUpon>UserControlReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlRooms.resx">
+      <DependentUpon>UserControlRooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

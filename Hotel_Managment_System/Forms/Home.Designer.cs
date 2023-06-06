@@ -33,33 +33,35 @@ namespace Hotel_Managment_System.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Pnl_Slide = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Name_lbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.labelDateTime = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Settings_btn = new System.Windows.Forms.Button();
             this.Reports_btn = new System.Windows.Forms.Button();
             this.Reservation_btn = new System.Windows.Forms.Button();
             this.Room_btn = new System.Windows.Forms.Button();
             this.Client_btn = new System.Windows.Forms.Button();
             this.Dashboard_btn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.settings1 = new Hotel_Managment_System.Controls.Settings();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Name_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.labelDateTime = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.userControlReservation1 = new Hotel_Managment_System.Forms.UserControlReservation();
+            this.userControlRooms1 = new Hotel_Managment_System.Forms.UserControlRooms();
             this.reports1 = new Hotel_Managment_System.Controls.Reports();
+            this.settings1 = new Hotel_Managment_System.Controls.Settings();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,6 +90,108 @@ namespace Hotel_Managment_System.Forms
             this.Pnl_Slide.TabIndex = 0;
             this.Pnl_Slide.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_Slide_Paint);
             // 
+            // Settings_btn
+            // 
+            this.Settings_btn.FlatAppearance.BorderSize = 0;
+            this.Settings_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Settings_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Settings_btn.ForeColor = System.Drawing.Color.White;
+            this.Settings_btn.Image = ((System.Drawing.Image)(resources.GetObject("Settings_btn.Image")));
+            this.Settings_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Settings_btn.Location = new System.Drawing.Point(26, 663);
+            this.Settings_btn.Name = "Settings_btn";
+            this.Settings_btn.Size = new System.Drawing.Size(276, 71);
+            this.Settings_btn.TabIndex = 6;
+            this.Settings_btn.Text = "      Settings";
+            this.Settings_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Settings_btn.UseVisualStyleBackColor = true;
+            this.Settings_btn.Click += new System.EventHandler(this.Settings_btn_Click);
+            // 
+            // Reports_btn
+            // 
+            this.Reports_btn.FlatAppearance.BorderSize = 0;
+            this.Reports_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reports_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reports_btn.ForeColor = System.Drawing.Color.White;
+            this.Reports_btn.Image = ((System.Drawing.Image)(resources.GetObject("Reports_btn.Image")));
+            this.Reports_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reports_btn.Location = new System.Drawing.Point(26, 571);
+            this.Reports_btn.Name = "Reports_btn";
+            this.Reports_btn.Size = new System.Drawing.Size(276, 71);
+            this.Reports_btn.TabIndex = 5;
+            this.Reports_btn.Text = "        Reports";
+            this.Reports_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Reports_btn.UseVisualStyleBackColor = true;
+            this.Reports_btn.Click += new System.EventHandler(this.Reports_btn_Click);
+            // 
+            // Reservation_btn
+            // 
+            this.Reservation_btn.FlatAppearance.BorderSize = 0;
+            this.Reservation_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reservation_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reservation_btn.ForeColor = System.Drawing.Color.White;
+            this.Reservation_btn.Image = ((System.Drawing.Image)(resources.GetObject("Reservation_btn.Image")));
+            this.Reservation_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reservation_btn.Location = new System.Drawing.Point(26, 476);
+            this.Reservation_btn.Name = "Reservation_btn";
+            this.Reservation_btn.Size = new System.Drawing.Size(276, 71);
+            this.Reservation_btn.TabIndex = 4;
+            this.Reservation_btn.Text = "        Reservation";
+            this.Reservation_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Reservation_btn.UseVisualStyleBackColor = true;
+            this.Reservation_btn.Click += new System.EventHandler(this.Reservation_btn_Click);
+            // 
+            // Room_btn
+            // 
+            this.Room_btn.FlatAppearance.BorderSize = 0;
+            this.Room_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Room_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Room_btn.ForeColor = System.Drawing.Color.White;
+            this.Room_btn.Image = ((System.Drawing.Image)(resources.GetObject("Room_btn.Image")));
+            this.Room_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Room_btn.Location = new System.Drawing.Point(26, 388);
+            this.Room_btn.Name = "Room_btn";
+            this.Room_btn.Size = new System.Drawing.Size(276, 71);
+            this.Room_btn.TabIndex = 3;
+            this.Room_btn.Text = "         Room";
+            this.Room_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Room_btn.UseVisualStyleBackColor = true;
+            this.Room_btn.Click += new System.EventHandler(this.Room_btn_Click);
+            // 
+            // Client_btn
+            // 
+            this.Client_btn.FlatAppearance.BorderSize = 0;
+            this.Client_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Client_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Client_btn.ForeColor = System.Drawing.Color.White;
+            this.Client_btn.Image = ((System.Drawing.Image)(resources.GetObject("Client_btn.Image")));
+            this.Client_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Client_btn.Location = new System.Drawing.Point(26, 300);
+            this.Client_btn.Name = "Client_btn";
+            this.Client_btn.Size = new System.Drawing.Size(276, 71);
+            this.Client_btn.TabIndex = 2;
+            this.Client_btn.Text = "         Client";
+            this.Client_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Client_btn.UseVisualStyleBackColor = true;
+            this.Client_btn.Click += new System.EventHandler(this.Client_btn_Click);
+            // 
+            // Dashboard_btn
+            // 
+            this.Dashboard_btn.FlatAppearance.BorderSize = 0;
+            this.Dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dashboard_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboard_btn.ForeColor = System.Drawing.Color.White;
+            this.Dashboard_btn.Image = ((System.Drawing.Image)(resources.GetObject("Dashboard_btn.Image")));
+            this.Dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Dashboard_btn.Location = new System.Drawing.Point(26, 214);
+            this.Dashboard_btn.Name = "Dashboard_btn";
+            this.Dashboard_btn.Size = new System.Drawing.Size(276, 71);
+            this.Dashboard_btn.TabIndex = 1;
+            this.Dashboard_btn.Text = "     Dashboard";
+            this.Dashboard_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Dashboard_btn.UseVisualStyleBackColor = true;
+            this.Dashboard_btn.Click += new System.EventHandler(this.Dashboard_btn_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(131)))), ((int)(((byte)(136)))));
@@ -104,13 +208,23 @@ namespace Hotel_Managment_System.Forms
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(41, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(229, 34);
+            this.label6.Size = new System.Drawing.Size(235, 32);
             this.label6.TabIndex = 2;
             this.label6.Text = "Fleet Club Hotel";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(47, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(176, 115);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
             // 
             // panel3
             // 
@@ -119,7 +233,7 @@ namespace Hotel_Managment_System.Forms
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(279, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1415, 193);
@@ -129,11 +243,11 @@ namespace Hotel_Managment_System.Forms
             // 
             this.Name_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Name_lbl.AutoSize = true;
-            this.Name_lbl.Font = new System.Drawing.Font("Century Gothic", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_lbl.ForeColor = System.Drawing.Color.White;
             this.Name_lbl.Location = new System.Drawing.Point(154, 142);
             this.Name_lbl.Name = "Name_lbl";
-            this.Name_lbl.Size = new System.Drawing.Size(26, 30);
+            this.Name_lbl.Size = new System.Drawing.Size(26, 29);
             this.Name_lbl.TabIndex = 5;
             this.Name_lbl.Text = "?";
             // 
@@ -141,11 +255,11 @@ namespace Hotel_Managment_System.Forms
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(19, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 30);
+            this.label1.Size = new System.Drawing.Size(136, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "Welcome :";
             // 
@@ -165,11 +279,11 @@ namespace Hotel_Managment_System.Forms
             // 
             this.labelDateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDateTime.AutoSize = true;
-            this.labelDateTime.Font = new System.Drawing.Font("Century Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDateTime.ForeColor = System.Drawing.Color.White;
             this.labelDateTime.Location = new System.Drawing.Point(10, 62);
             this.labelDateTime.Name = "labelDateTime";
-            this.labelDateTime.Size = new System.Drawing.Size(31, 34);
+            this.labelDateTime.Size = new System.Drawing.Size(32, 32);
             this.labelDateTime.TabIndex = 3;
             this.labelDateTime.Text = "?";
             // 
@@ -180,32 +294,16 @@ namespace Hotel_Managment_System.Forms
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(56)))), ((int)(((byte)(79)))));
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.ForeColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(1332, 62);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(68, 21);
+            this.linkLabel1.Size = new System.Drawing.Size(70, 20);
             this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "LogOut";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel6.Controls.Add(this.reports1);
-            this.panel6.Controls.Add(this.settings1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(279, 193);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1415, 564);
-            this.panel6.TabIndex = 2;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1
             // 
@@ -218,147 +316,73 @@ namespace Hotel_Managment_System.Forms
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Settings_btn
+            // panel6
             // 
-            this.Settings_btn.FlatAppearance.BorderSize = 0;
-            this.Settings_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Settings_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Settings_btn.ForeColor = System.Drawing.Color.White;
-            this.Settings_btn.Image = ((System.Drawing.Image)(resources.GetObject("Settings_btn.Image")));
-            this.Settings_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Settings_btn.Location = new System.Drawing.Point(26, 663);
-            this.Settings_btn.Name = "Settings_btn";
-            this.Settings_btn.Size = new System.Drawing.Size(276, 71);
-            this.Settings_btn.TabIndex = 6;
-            this.Settings_btn.Text = "      Settings";
-            this.Settings_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Settings_btn.UseVisualStyleBackColor = true;
-            this.Settings_btn.Click += new System.EventHandler(this.Settings_btn_Click);
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel6.Controls.Add(this.userControlReservation1);
+            this.panel6.Controls.Add(this.userControlRooms1);
+            this.panel6.Controls.Add(this.reports1);
+            this.panel6.Controls.Add(this.settings1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(279, 193);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1415, 564);
+            this.panel6.TabIndex = 2;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
-            // Reports_btn
+            // userControlReservation1
             // 
-            this.Reports_btn.FlatAppearance.BorderSize = 0;
-            this.Reports_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Reports_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reports_btn.ForeColor = System.Drawing.Color.White;
-            this.Reports_btn.Image = ((System.Drawing.Image)(resources.GetObject("Reports_btn.Image")));
-            this.Reports_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reports_btn.Location = new System.Drawing.Point(26, 571);
-            this.Reports_btn.Name = "Reports_btn";
-            this.Reports_btn.Size = new System.Drawing.Size(276, 71);
-            this.Reports_btn.TabIndex = 5;
-            this.Reports_btn.Text = "        Reports";
-            this.Reports_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Reports_btn.UseVisualStyleBackColor = true;
-            this.Reports_btn.Click += new System.EventHandler(this.Reports_btn_Click);
+            this.userControlReservation1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userControlReservation1.Location = new System.Drawing.Point(6, 69);
+            this.userControlReservation1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlReservation1.Name = "userControlReservation1";
+            this.userControlReservation1.Size = new System.Drawing.Size(1159, 461);
+            this.userControlReservation1.TabIndex = 7;
+            this.userControlReservation1.Visible = false;
             // 
-            // Reservation_btn
+            // userControlRooms1
             // 
-            this.Reservation_btn.FlatAppearance.BorderSize = 0;
-            this.Reservation_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Reservation_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reservation_btn.ForeColor = System.Drawing.Color.White;
-            this.Reservation_btn.Image = ((System.Drawing.Image)(resources.GetObject("Reservation_btn.Image")));
-            this.Reservation_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reservation_btn.Location = new System.Drawing.Point(26, 476);
-            this.Reservation_btn.Name = "Reservation_btn";
-            this.Reservation_btn.Size = new System.Drawing.Size(276, 71);
-            this.Reservation_btn.TabIndex = 4;
-            this.Reservation_btn.Text = "        Reservation";
-            this.Reservation_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Reservation_btn.UseVisualStyleBackColor = true;
-            this.Reservation_btn.Click += new System.EventHandler(this.Reservation_btn_Click);
-            // 
-            // Room_btn
-            // 
-            this.Room_btn.FlatAppearance.BorderSize = 0;
-            this.Room_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Room_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Room_btn.ForeColor = System.Drawing.Color.White;
-            this.Room_btn.Image = ((System.Drawing.Image)(resources.GetObject("Room_btn.Image")));
-            this.Room_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Room_btn.Location = new System.Drawing.Point(26, 388);
-            this.Room_btn.Name = "Room_btn";
-            this.Room_btn.Size = new System.Drawing.Size(276, 71);
-            this.Room_btn.TabIndex = 3;
-            this.Room_btn.Text = "         Room";
-            this.Room_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Room_btn.UseVisualStyleBackColor = true;
-            this.Room_btn.Click += new System.EventHandler(this.Room_btn_Click);
-            // 
-            // Client_btn
-            // 
-            this.Client_btn.FlatAppearance.BorderSize = 0;
-            this.Client_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Client_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Client_btn.ForeColor = System.Drawing.Color.White;
-            this.Client_btn.Image = ((System.Drawing.Image)(resources.GetObject("Client_btn.Image")));
-            this.Client_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Client_btn.Location = new System.Drawing.Point(26, 300);
-            this.Client_btn.Name = "Client_btn";
-            this.Client_btn.Size = new System.Drawing.Size(276, 71);
-            this.Client_btn.TabIndex = 2;
-            this.Client_btn.Text = "         Client";
-            this.Client_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Client_btn.UseVisualStyleBackColor = true;
-            this.Client_btn.Click += new System.EventHandler(this.Client_btn_Click);
-            // 
-            // Dashboard_btn
-            // 
-            this.Dashboard_btn.FlatAppearance.BorderSize = 0;
-            this.Dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Dashboard_btn.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dashboard_btn.ForeColor = System.Drawing.Color.White;
-            this.Dashboard_btn.Image = ((System.Drawing.Image)(resources.GetObject("Dashboard_btn.Image")));
-            this.Dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Dashboard_btn.Location = new System.Drawing.Point(26, 214);
-            this.Dashboard_btn.Name = "Dashboard_btn";
-            this.Dashboard_btn.Size = new System.Drawing.Size(276, 71);
-            this.Dashboard_btn.TabIndex = 1;
-            this.Dashboard_btn.Text = "     Dashboard";
-            this.Dashboard_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Dashboard_btn.UseVisualStyleBackColor = true;
-            this.Dashboard_btn.Click += new System.EventHandler(this.Dashboard_btn_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(47, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(176, 115);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // settings1
-            // 
-            this.settings1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.settings1.Font = new System.Drawing.Font("Century Gothic", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.settings1.Location = new System.Drawing.Point(16, -2);
-            this.settings1.Name = "settings1";
-            this.settings1.Size = new System.Drawing.Size(1371, 563);
-            this.settings1.TabIndex = 0;
-            this.settings1.Visible = false;
+            this.userControlRooms1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlRooms1.Location = new System.Drawing.Point(0, 0);
+            this.userControlRooms1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.userControlRooms1.Name = "userControlRooms1";
+            this.userControlRooms1.Size = new System.Drawing.Size(1415, 564);
+            this.userControlRooms1.TabIndex = 2;
+            this.userControlRooms1.Visible = false;
             // 
             // reports1
             // 
-            this.reports1.Font = new System.Drawing.Font("Century Gothic", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.reports1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.reports1.Location = new System.Drawing.Point(29, 40);
             this.reports1.Name = "reports1";
             this.reports1.Size = new System.Drawing.Size(1167, 492);
             this.reports1.TabIndex = 1;
             this.reports1.Visible = false;
             // 
+            // settings1
+            // 
+            this.settings1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.settings1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.settings1.Location = new System.Drawing.Point(16, -2);
+            this.settings1.Name = "settings1";
+            this.settings1.Size = new System.Drawing.Size(1371, 563);
+            this.settings1.TabIndex = 0;
+            this.settings1.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1694, 757);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Century Gothic", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -368,13 +392,13 @@ namespace Hotel_Managment_System.Forms
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -403,5 +427,7 @@ namespace Hotel_Managment_System.Forms
         private System.Windows.Forms.Timer timer1;
         private Controls.Settings settings1;
         private Controls.Reports reports1;
+        private UserControlRooms userControlRooms1;
+        private UserControlReservation userControlReservation1;
     }
 }
