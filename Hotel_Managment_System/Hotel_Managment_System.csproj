@@ -118,16 +118,16 @@
     <Compile Include="Forms\ReportsForm.Designer.cs">
       <DependentUpon>ReportsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserControlReservation.cs">
+    <Compile Include="Controls\UserControlReservation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\UserControlReservation.Designer.cs">
+    <Compile Include="Controls\UserControlReservation.Designer.cs">
       <DependentUpon>UserControlReservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserControlRooms.cs">
+    <Compile Include="Controls\UserControlRooms.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\UserControlRooms.Designer.cs">
+    <Compile Include="Controls\UserControlRooms.Designer.cs">
       <DependentUpon>UserControlRooms.cs</DependentUpon>
     </Compile>
     <Compile Include="HotelDB.Context.cs">
@@ -213,10 +213,10 @@
     <EmbeddedResource Include="Forms\ReportsForm.resx">
       <DependentUpon>ReportsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserControlReservation.resx">
+    <EmbeddedResource Include="Controls\UserControlReservation.resx">
       <DependentUpon>UserControlReservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserControlRooms.resx">
+    <EmbeddedResource Include="Controls\UserControlRooms.resx">
       <DependentUpon>UserControlRooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

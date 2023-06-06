@@ -332,17 +332,20 @@ namespace Hotel_Managment_System.Forms
             // 
             // userControlReservation1
             // 
-            this.userControlReservation1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.userControlReservation1.Location = new System.Drawing.Point(6, 69);
-            this.userControlReservation1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlReservation1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.userControlReservation1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlReservation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.userControlReservation1.Location = new System.Drawing.Point(0, 0);
             this.userControlReservation1.Name = "userControlReservation1";
-            this.userControlReservation1.Size = new System.Drawing.Size(1159, 461);
-            this.userControlReservation1.TabIndex = 7;
+            this.userControlReservation1.Size = new System.Drawing.Size(1415, 564);
+            this.userControlReservation1.TabIndex = 3;
             this.userControlReservation1.Visible = false;
             // 
             // userControlRooms1
             // 
+            this.userControlRooms1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.userControlRooms1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlRooms1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.userControlRooms1.Location = new System.Drawing.Point(0, 0);
             this.userControlRooms1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.userControlRooms1.Name = "userControlRooms1";

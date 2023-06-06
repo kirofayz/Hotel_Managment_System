@@ -70,7 +70,7 @@ namespace Hotel_Managment_System.Controls
             this.tabControlSettings.Controls.Add(this.tabPage1);
             this.tabControlSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabControlSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlSettings.Location = new System.Drawing.Point(38, 47);
+            this.tabControlSettings.Location = new System.Drawing.Point(38, 38);
             this.tabControlSettings.Multiline = true;
             this.tabControlSettings.Name = "tabControlSettings";
             this.tabControlSettings.SelectedIndex = 0;
@@ -95,7 +95,6 @@ namespace Hotel_Managment_System.Controls
             this.tabPageAdd.Size = new System.Drawing.Size(1159, 461);
             this.tabPageAdd.TabIndex = 0;
             this.tabPageAdd.Text = "Add User";
-        
             // 
             // Role_combo
             // 
