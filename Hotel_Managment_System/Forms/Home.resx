@@ -118,6 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Checkout_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAA1tJREFUaEPtmktrFEEUhScqRFy4y8skC0ElKIIoIvgL4nPpTkgEQSUgBAlZ+gPc
+        CO4ENyohBAVRcaeICq40GJ/oKio+g1EXKqLld6ruhExmnMxMd7XT4AeHDqe67umbTE331KTwn2bDObcL
+        vULVmEW30CBqsanNBRf2EtXDedR8zXBR8xuZNrsE/A40gL7qJBi0oeaBi9qB1Mw06je7IowfQGLSrHxC
+        A63oo2/FuQ1m5xMaOBf6cENm5RMaOBj6cBNm5RMaWBv6cO9RKu9e1LmL7qNOs7KBwNdIpLJOqDMZyrnH
+        qMPs+BA25mOdO2JWIqjTjqZ8Reeeoi4bigtBh3ykc+NmJYZaauaBr5pVM4T0+Tjn3qHU7vLUakPFZp6g
+        uGuGgBb0RmnQZ3YJ+HfCcCL0cmuzknEgYNxHlbPKxvWQmZS5RjjuRN9kzuOGxhJBkcOhVhmjdkrdMHf+
+        otex3fy96IfMBbzwE5NAkfWhVhkKHEX+L1MrnK8H04dI6FhsYjeq1IQ47icngSJaJ1rsSRi2Wp3okXfC
+        0d9LOOqz0neZFfiFVuu8xFBowpdsnOJvveyGyFFr4m9NiOs6LxUoNhRqNoy/V3DUI8o95N9uOeqjRbUm
+        xH6dmwoU2xhqNsyIlZoDrx8tfHdayGe0wqYkh2JaJx9UuUH0Wx9BXSb9vNhfQpy2S0gPil4MtTNlu8Wn
+        B0WPhtqZ8Qylv/lB0U2+fHY0fMOtCoWXoOLn+Njo3tFr0elD8Us+Jj7XLDIOBAyHnOjss8g4ELA55ERl
+        Bi23yDgQsBR9UlpETllcXAi6HPKiscWi4kLQsZAXhSmLiQ9hW0NmFPzjfiYQpnWi71HS5ifKfOPuqo9O
+        j9/opJXPDkL19CrOmJVPaGBb6MM9Nyuf0MAy9MW3ktW2ZyxooLhOBszKJzRQ3Be+aVY+oYGVSM9F4gTS
+        PnGrDecLLlw7g7V89q6V21Y6ewjfE64hFbTT+G/ePAjWPxYIPUx2m67IgDE7rQT5YbjinLN2WrYQ/Dbk
+        u26z5PUGy82YVYL8MFxxzqxZ2UKwNtFEj1mLXhR+3XOiQ/CFkO9fGj2m4j2m4lfb+HXPiQ7B61Cl3RW9
+        fNbYaSXg1z0nEwjXYtU3W3rJSNq9r3pBjNc9p1AoFP4ASwB1fL9KgxsAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="Settings_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -5527,6 +5547,6 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>43</value>
+    <value>25</value>
   </metadata>
 </root>

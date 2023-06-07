@@ -69,6 +69,7 @@ namespace Hotel_Managment_System.Forms
             settings1.Hide();
             reports1.Hide();
             userControlReservation1.Hide();
+            checkOut1.Hide();
         }
 
         private void Reservation_btn_Click(object sender, EventArgs e)
@@ -78,6 +79,7 @@ namespace Hotel_Managment_System.Forms
             reports1.Hide();
             settings1.Hide();
             userControlRooms1.Hide();
+            checkOut1.Hide();
 
         }
 
@@ -88,6 +90,7 @@ namespace Hotel_Managment_System.Forms
             reports1.Show();
             userControlReservation1.Hide();
             userControlRooms1.Hide();
+            checkOut1.Hide();
         }
 
         private void Settings_btn_Click(object sender, EventArgs e)
@@ -97,6 +100,7 @@ namespace Hotel_Managment_System.Forms
             settings1.Show();
             userControlReservation1.Hide();
             userControlRooms1.Hide();
+            checkOut1.Hide();
         }
 
         private void Pnl_Slide_Paint(object sender, PaintEventArgs e)
@@ -110,6 +114,22 @@ namespace Hotel_Managment_System.Forms
         }
 
         private void SettingsControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MovePanel(Checkout_btn);
+            checkOut1.Show();
+            reports1.Hide();
+            settings1.Hide();
+            userControlReservation1.Hide();
+            userControlRooms1.Hide();
+            
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

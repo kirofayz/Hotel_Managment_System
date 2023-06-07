@@ -32,6 +32,7 @@ namespace Hotel_Managment_System.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Checkout_btn = new System.Windows.Forms.Button();
             this.Pnl_Slide = new System.Windows.Forms.Panel();
             this.Settings_btn = new System.Windows.Forms.Button();
             this.Reports_btn = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@ namespace Hotel_Managment_System.Forms
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.checkOut1 = new Hotel_Managment_System.Controls.CheckOut();
             this.userControlReservation1 = new Hotel_Managment_System.Forms.UserControlReservation();
             this.userControlRooms1 = new Hotel_Managment_System.Forms.UserControlRooms();
             this.reports1 = new Hotel_Managment_System.Controls.Reports();
@@ -67,6 +69,7 @@ namespace Hotel_Managment_System.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(131)))), ((int)(((byte)(136)))));
+            this.panel1.Controls.Add(this.Checkout_btn);
             this.panel1.Controls.Add(this.Pnl_Slide);
             this.panel1.Controls.Add(this.Settings_btn);
             this.panel1.Controls.Add(this.Reports_btn);
@@ -81,10 +84,27 @@ namespace Hotel_Managment_System.Forms
             this.panel1.Size = new System.Drawing.Size(279, 757);
             this.panel1.TabIndex = 0;
             // 
+            // Checkout_btn
+            // 
+            this.Checkout_btn.FlatAppearance.BorderSize = 0;
+            this.Checkout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Checkout_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Checkout_btn.ForeColor = System.Drawing.Color.White;
+            this.Checkout_btn.Image = ((System.Drawing.Image)(resources.GetObject("Checkout_btn.Image")));
+            this.Checkout_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Checkout_btn.Location = new System.Drawing.Point(27, 451);
+            this.Checkout_btn.Name = "Checkout_btn";
+            this.Checkout_btn.Size = new System.Drawing.Size(237, 71);
+            this.Checkout_btn.TabIndex = 7;
+            this.Checkout_btn.Text = "         CheckOut";
+            this.Checkout_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Checkout_btn.UseVisualStyleBackColor = true;
+            this.Checkout_btn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Pnl_Slide
             // 
             this.Pnl_Slide.BackColor = System.Drawing.Color.White;
-            this.Pnl_Slide.Location = new System.Drawing.Point(12, 214);
+            this.Pnl_Slide.Location = new System.Drawing.Point(11, 211);
             this.Pnl_Slide.Name = "Pnl_Slide";
             this.Pnl_Slide.Size = new System.Drawing.Size(10, 71);
             this.Pnl_Slide.TabIndex = 0;
@@ -98,9 +118,9 @@ namespace Hotel_Managment_System.Forms
             this.Settings_btn.ForeColor = System.Drawing.Color.White;
             this.Settings_btn.Image = ((System.Drawing.Image)(resources.GetObject("Settings_btn.Image")));
             this.Settings_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Settings_btn.Location = new System.Drawing.Point(26, 663);
+            this.Settings_btn.Location = new System.Drawing.Point(27, 687);
             this.Settings_btn.Name = "Settings_btn";
-            this.Settings_btn.Size = new System.Drawing.Size(276, 71);
+            this.Settings_btn.Size = new System.Drawing.Size(237, 71);
             this.Settings_btn.TabIndex = 6;
             this.Settings_btn.Text = "      Settings";
             this.Settings_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -115,9 +135,9 @@ namespace Hotel_Managment_System.Forms
             this.Reports_btn.ForeColor = System.Drawing.Color.White;
             this.Reports_btn.Image = ((System.Drawing.Image)(resources.GetObject("Reports_btn.Image")));
             this.Reports_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reports_btn.Location = new System.Drawing.Point(26, 571);
+            this.Reports_btn.Location = new System.Drawing.Point(27, 610);
             this.Reports_btn.Name = "Reports_btn";
-            this.Reports_btn.Size = new System.Drawing.Size(276, 71);
+            this.Reports_btn.Size = new System.Drawing.Size(237, 71);
             this.Reports_btn.TabIndex = 5;
             this.Reports_btn.Text = "        Reports";
             this.Reports_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -132,9 +152,9 @@ namespace Hotel_Managment_System.Forms
             this.Reservation_btn.ForeColor = System.Drawing.Color.White;
             this.Reservation_btn.Image = ((System.Drawing.Image)(resources.GetObject("Reservation_btn.Image")));
             this.Reservation_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reservation_btn.Location = new System.Drawing.Point(26, 476);
+            this.Reservation_btn.Location = new System.Drawing.Point(27, 375);
             this.Reservation_btn.Name = "Reservation_btn";
-            this.Reservation_btn.Size = new System.Drawing.Size(276, 71);
+            this.Reservation_btn.Size = new System.Drawing.Size(237, 71);
             this.Reservation_btn.TabIndex = 4;
             this.Reservation_btn.Text = "        Reservation";
             this.Reservation_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -149,9 +169,9 @@ namespace Hotel_Managment_System.Forms
             this.Room_btn.ForeColor = System.Drawing.Color.White;
             this.Room_btn.Image = ((System.Drawing.Image)(resources.GetObject("Room_btn.Image")));
             this.Room_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Room_btn.Location = new System.Drawing.Point(26, 388);
+            this.Room_btn.Location = new System.Drawing.Point(27, 530);
             this.Room_btn.Name = "Room_btn";
-            this.Room_btn.Size = new System.Drawing.Size(276, 71);
+            this.Room_btn.Size = new System.Drawing.Size(237, 71);
             this.Room_btn.TabIndex = 3;
             this.Room_btn.Text = "         Room";
             this.Room_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -166,9 +186,9 @@ namespace Hotel_Managment_System.Forms
             this.Client_btn.ForeColor = System.Drawing.Color.White;
             this.Client_btn.Image = ((System.Drawing.Image)(resources.GetObject("Client_btn.Image")));
             this.Client_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Client_btn.Location = new System.Drawing.Point(26, 300);
+            this.Client_btn.Location = new System.Drawing.Point(27, 293);
             this.Client_btn.Name = "Client_btn";
-            this.Client_btn.Size = new System.Drawing.Size(276, 71);
+            this.Client_btn.Size = new System.Drawing.Size(237, 71);
             this.Client_btn.TabIndex = 2;
             this.Client_btn.Text = "         Client";
             this.Client_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -183,9 +203,9 @@ namespace Hotel_Managment_System.Forms
             this.Dashboard_btn.ForeColor = System.Drawing.Color.White;
             this.Dashboard_btn.Image = ((System.Drawing.Image)(resources.GetObject("Dashboard_btn.Image")));
             this.Dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Dashboard_btn.Location = new System.Drawing.Point(26, 214);
+            this.Dashboard_btn.Location = new System.Drawing.Point(27, 211);
             this.Dashboard_btn.Name = "Dashboard_btn";
-            this.Dashboard_btn.Size = new System.Drawing.Size(276, 71);
+            this.Dashboard_btn.Size = new System.Drawing.Size(237, 71);
             this.Dashboard_btn.TabIndex = 1;
             this.Dashboard_btn.Text = "     Dashboard";
             this.Dashboard_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -274,6 +294,7 @@ namespace Hotel_Managment_System.Forms
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1415, 100);
             this.panel4.TabIndex = 0;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // labelDateTime
             // 
@@ -319,6 +340,8 @@ namespace Hotel_Managment_System.Forms
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel6.Controls.Add(this.checkOut1);
             this.panel6.Controls.Add(this.userControlReservation1);
             this.panel6.Controls.Add(this.userControlRooms1);
             this.panel6.Controls.Add(this.reports1);
@@ -330,11 +353,23 @@ namespace Hotel_Managment_System.Forms
             this.panel6.TabIndex = 2;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
+            // checkOut1
+            // 
+            this.checkOut1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.checkOut1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkOut1.Location = new System.Drawing.Point(0, 0);
+            this.checkOut1.Name = "checkOut1";
+            this.checkOut1.Size = new System.Drawing.Size(1415, 564);
+            this.checkOut1.TabIndex = 4;
+            this.checkOut1.Visible = false;
+            // 
             // userControlReservation1
             // 
             this.userControlReservation1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.userControlReservation1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.userControlReservation1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userControlReservation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.userControlReservation1.ForeColor = System.Drawing.Color.Transparent;
             this.userControlReservation1.Location = new System.Drawing.Point(0, 0);
             this.userControlReservation1.Name = "userControlReservation1";
             this.userControlReservation1.Size = new System.Drawing.Size(1415, 564);
@@ -355,6 +390,7 @@ namespace Hotel_Managment_System.Forms
             // 
             // reports1
             // 
+            this.reports1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.reports1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.reports1.Location = new System.Drawing.Point(29, 40);
             this.reports1.Name = "reports1";
@@ -432,5 +468,7 @@ namespace Hotel_Managment_System.Forms
         private Controls.Reports reports1;
         private UserControlRooms userControlRooms1;
         private UserControlReservation userControlReservation1;
+        private System.Windows.Forms.Button Checkout_btn;
+        private Controls.CheckOut checkOut1;
     }
 }

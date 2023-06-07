@@ -156,6 +156,7 @@ namespace Hotel_Managment_System.Controls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button2);
