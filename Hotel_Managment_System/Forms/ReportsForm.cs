@@ -120,25 +120,25 @@ namespace Hotel_Managment_System.Forms
 
         private void Excel_btn_Click(object sender, EventArgs e)
         {
-            dataGridViewClients.SelectAll();
-            DataObject copydata = dataGridViewClients.GetClipboardContent();
-            if(copydata!=null)
-            {
-                Clipboard.SetDataObject(copydata);
-            }
-            Microsoft.Office.Interop.Excel.Application xlapp = new Microsoft.Office.Interop.Excel.Application();
-            xlapp.Visible = true;
-            Microsoft.Office.Interop.Excel.Workbook xlwbook;
-            Microsoft.Office.Interop.Excel.Worksheet xlsheet;
-            object miseddata = System.Reflection.Missing.Value;
-            xlwbook = xlapp.Workbooks.Add(miseddata);
+            //dataGridViewClients.SelectAll();
+            //DataObject copydata = dataGridViewClients.GetClipboardContent();
+            //if(copydata!=null)
+            //{
+            //    Clipboard.SetDataObject(copydata);
+            //}
+            //Microsoft.Office.Interop.Excel.Application xlapp = new Microsoft.Office.Interop.Excel.Application();
+            //xlapp.Visible = true;
+            //Microsoft.Office.Interop.Excel.Workbook xlwbook;
+            //Microsoft.Office.Interop.Excel.Worksheet xlsheet;
+            //object miseddata = System.Reflection.Missing.Value;
+            //xlwbook = xlapp.Workbooks.Add(miseddata);
 
-            xlsheet =(Microsoft.Office.Interop.Excel.Worksheet) xlwbook.Worksheets.get_Item(1);
+            //xlsheet =(Microsoft.Office.Interop.Excel.Worksheet) xlwbook.Worksheets.get_Item(1);
 
-            Microsoft.Office.Interop.Excel.Range xlr = (Microsoft.Office.Interop.Excel.Range)xlsheet.Cells[1, 1];
-            xlr.Select();
+            //Microsoft.Office.Interop.Excel.Range xlr = (Microsoft.Office.Interop.Excel.Range)xlsheet.Cells[1, 1];
+            //xlr.Select();
 
-            xlsheet.PasteSpecial(xlr, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            //xlsheet.PasteSpecial(xlr, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
 
         }
     }
