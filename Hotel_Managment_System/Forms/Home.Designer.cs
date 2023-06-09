@@ -51,13 +51,14 @@ namespace Hotel_Managment_System.Forms
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.userControlDashbrd1 = new Hotel_Managment_System.Controls.UserControlDashbrd();
+            this.userControlClient1 = new Hotel_Managment_System.Controls.UserControlClient();
             this.checkOut1 = new Hotel_Managment_System.Controls.CheckOut();
             this.userControlReservation1 = new Hotel_Managment_System.Forms.UserControlReservation();
             this.userControlRooms1 = new Hotel_Managment_System.Forms.UserControlRooms();
             this.reports1 = new Hotel_Managment_System.Controls.Reports();
             this.settings1 = new Hotel_Managment_System.Controls.Settings();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.userControlClient1 = new Hotel_Managment_System.Controls.UserControlClient();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -342,6 +343,7 @@ namespace Hotel_Managment_System.Forms
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel6.Controls.Add(this.userControlDashbrd1);
             this.panel6.Controls.Add(this.userControlClient1);
             this.panel6.Controls.Add(this.checkOut1);
             this.panel6.Controls.Add(this.userControlReservation1);
@@ -354,6 +356,33 @@ namespace Hotel_Managment_System.Forms
             this.panel6.Size = new System.Drawing.Size(1415, 564);
             this.panel6.TabIndex = 2;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // userControlDashbrd1
+            // 
+            this.userControlDashbrd1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userControlDashbrd1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.userControlDashbrd1.Location = new System.Drawing.Point(90, 54);
+            this.userControlDashbrd1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.userControlDashbrd1.Name = "userControlDashbrd1";
+            this.userControlDashbrd1.Size = new System.Drawing.Size(1395, 520);
+            this.userControlDashbrd1.TabIndex = 6;
+            this.userControlDashbrd1.Visible = false;
+            // 
+            // userControlClient1
+            // 
+            this.userControlClient1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.userControlClient1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlClient1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlClient1.Location = new System.Drawing.Point(0, 0);
+            this.userControlClient1.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlClient1.Name = "userControlClient1";
+            this.userControlClient1.Size = new System.Drawing.Size(1415, 564);
+            this.userControlClient1.TabIndex = 5;
+            this.userControlClient1.Visible = false;
             // 
             // checkOut1
             // 
@@ -410,20 +439,6 @@ namespace Hotel_Managment_System.Forms
             this.settings1.Size = new System.Drawing.Size(1371, 563);
             this.settings1.TabIndex = 0;
             this.settings1.Visible = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // userControlClient1
-            // 
-            this.userControlClient1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.userControlClient1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlClient1.Location = new System.Drawing.Point(0, 0);
-            this.userControlClient1.Name = "userControlClient1";
-            this.userControlClient1.Size = new System.Drawing.Size(1415, 564);
-            this.userControlClient1.TabIndex = 5;
-            this.userControlClient1.Visible = false;
             // 
             // Home
             // 
@@ -484,5 +499,6 @@ namespace Hotel_Managment_System.Forms
         private System.Windows.Forms.Button Checkout_btn;
         private Controls.CheckOut checkOut1;
         private Controls.UserControlClient userControlClient1;
+        private Controls.UserControlDashbrd userControlDashbrd1;
     }
 }

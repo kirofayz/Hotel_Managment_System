@@ -59,7 +59,14 @@ namespace Hotel_Managment_System.Forms
         private void Dashboard_btn_Click(object sender, EventArgs e)
         {
             MovePanel(Dashboard_btn);
-            
+            MovePanel(Client_btn);
+            userControlClient1.Hide();
+            userControlRooms1.Hide();
+            settings1.Hide();
+            reports1.Hide();
+            userControlReservation1.Hide();
+            checkOut1.Hide();
+            userControlDashbrd1.Show();
         }
 
         private void Client_btn_Click(object sender, EventArgs e)
@@ -71,6 +78,8 @@ namespace Hotel_Managment_System.Forms
             reports1.Hide();
             userControlReservation1.Hide();
             checkOut1.Hide();
+            userControlDashbrd1.Hide();
+
 
         }
 
@@ -83,6 +92,8 @@ namespace Hotel_Managment_System.Forms
             userControlReservation1.Hide();
             checkOut1.Hide();
             userControlClient1.Hide();
+            userControlDashbrd1.Hide();
+
         }
 
         private void Reservation_btn_Click(object sender, EventArgs e)
@@ -94,6 +105,8 @@ namespace Hotel_Managment_System.Forms
             userControlRooms1.Hide();
             checkOut1.Hide();
             userControlClient1.Hide();
+            userControlDashbrd1.Hide();
+
 
         }
 
@@ -106,6 +119,8 @@ namespace Hotel_Managment_System.Forms
             userControlRooms1.Hide();
             checkOut1.Hide();
             userControlClient1.Hide();
+            userControlDashbrd1.Hide();
+
         }
 
         private void Settings_btn_Click(object sender, EventArgs e)
@@ -117,6 +132,8 @@ namespace Hotel_Managment_System.Forms
             userControlRooms1.Hide();
             checkOut1.Hide();
             userControlClient1.Hide();
+            userControlDashbrd1.Hide();
+
         }
 
         private void Pnl_Slide_Paint(object sender, PaintEventArgs e)
@@ -143,6 +160,8 @@ namespace Hotel_Managment_System.Forms
             userControlReservation1.Hide();
             userControlRooms1.Hide();
             userControlClient1.Hide();
+            userControlDashbrd1.Hide();
+
 
         }
 
