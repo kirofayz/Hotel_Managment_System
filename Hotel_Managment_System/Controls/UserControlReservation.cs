@@ -141,8 +141,11 @@ namespace Hotel_Managment_System.Forms
                                on r.RoomID equals ro.RoomID
                                select new { GuestName = c.firstName + " " + c.lastName, Room = ro.RoomNo, RoomType = ro.RoomType , CheckIn = r.CheckInDate , Checkout = r.CheckOutDate };
             DGV_Show.DefaultCellStyle.ForeColor = Color.Black;
-            DGV_Show.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            DGV_Show.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            DGV_Show.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (DataGridViewColumn column in DGV_Show.Columns)
+            {
+                column.FillWeight = 1;
+            }
             DGV_Show.DataSource = Show_Reserve.ToList();
            
 
