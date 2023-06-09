@@ -32,6 +32,7 @@ namespace Hotel_Managment_System.Controls
             this.Addbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Rooms_combo = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Addbtn
@@ -75,11 +76,28 @@ namespace Hotel_Managment_System.Controls
             this.Rooms_combo.Size = new System.Drawing.Size(463, 37);
             this.Rooms_combo.TabIndex = 7;
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(131)))), ((int)(((byte)(136)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(405, 206);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 73);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Load";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Addbtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Rooms_combo);
@@ -96,5 +114,6 @@ namespace Hotel_Managment_System.Controls
         private System.Windows.Forms.Button Addbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Rooms_combo;
+        private System.Windows.Forms.Button button1;
     }
 }

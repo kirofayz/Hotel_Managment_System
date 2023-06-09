@@ -51,12 +51,12 @@ namespace Hotel_Managment_System.Forms
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.checkOut1 = new Hotel_Managment_System.Controls.CheckOut();
             this.userControlReservation1 = new Hotel_Managment_System.Forms.UserControlReservation();
             this.userControlRooms1 = new Hotel_Managment_System.Forms.UserControlRooms();
             this.reports1 = new Hotel_Managment_System.Controls.Reports();
             this.settings1 = new Hotel_Managment_System.Controls.Settings();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -232,7 +232,7 @@ namespace Hotel_Managment_System.Forms
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(41, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(235, 32);
+            this.label6.Size = new System.Drawing.Size(234, 32);
             this.label6.TabIndex = 2;
             this.label6.Text = "Fleet Club Hotel";
             // 
@@ -304,7 +304,7 @@ namespace Hotel_Managment_System.Forms
             this.labelDateTime.ForeColor = System.Drawing.Color.White;
             this.labelDateTime.Location = new System.Drawing.Point(10, 62);
             this.labelDateTime.Name = "labelDateTime";
-            this.labelDateTime.Size = new System.Drawing.Size(32, 32);
+            this.labelDateTime.Size = new System.Drawing.Size(31, 32);
             this.labelDateTime.TabIndex = 3;
             this.labelDateTime.Text = "?";
             // 
@@ -353,6 +353,10 @@ namespace Hotel_Managment_System.Forms
             this.panel6.TabIndex = 2;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // checkOut1
             // 
             this.checkOut1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -374,6 +378,7 @@ namespace Hotel_Managment_System.Forms
             this.userControlReservation1.Name = "userControlReservation1";
             this.userControlReservation1.Size = new System.Drawing.Size(1415, 564);
             this.userControlReservation1.TabIndex = 3;
+            this.userControlReservation1.user_name = null;
             this.userControlReservation1.Visible = false;
             // 
             // userControlRooms1
@@ -407,10 +412,6 @@ namespace Hotel_Managment_System.Forms
             this.settings1.Size = new System.Drawing.Size(1371, 563);
             this.settings1.TabIndex = 0;
             this.settings1.Visible = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Home
             // 

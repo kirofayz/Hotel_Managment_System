@@ -30,39 +30,7 @@ namespace Hotel_Managment_System.Forms
 
         private void UserControlReservation_Load(object sender, EventArgs e)
         {
-            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
-            var Query = from c in context.Clients
-                        select new { FirstName = c.firstName, LastName = c.lastName };
 
-            var Query1 = from r in context.Rooms
-                         where r.RoomFree == "Y"
-                         select new { RoomNo = r.RoomNo };
-
-            var Query2 = from r in context.Rooms
-                         where r.RoomFree == "N"
-                         select new { RoomNo = r.RoomNo };
-
-            List<int> R = new List<int>();
-            List<string> C = new List<string>();
-            List<int> R1 = new List<int>();
-
-            foreach (var item in Query1)
-            {
-                R.Add(item.RoomNo);
-            }
-            foreach (var item in Query2)
-            {
-                R1.Add(item.RoomNo);
-            }
-
-            foreach (var item in Query)
-            {
-                C.Add(item.FirstName + " " + item.LastName);
-            }
-            Client_combo.DataSource = C;
-            Room_combo.DataSource = R;
-            RSearch_combo.DataSource = R1;
-            Payment_combo.SelectedIndex = 0;
         }
 
         private void add_btn_Click(object sender, EventArgs e)
@@ -207,6 +175,43 @@ namespace Hotel_Managment_System.Forms
             DGV_Show.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             DGV_Show.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             DGV_Show.DataSource = Show_Reserve.ToList();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
+            var Query = from c in context.Clients
+                        select new { FirstName = c.firstName, LastName = c.lastName };
+
+            var Query1 = from r in context.Rooms
+                         where r.RoomFree == "Y"
+                         select new { RoomNo = r.RoomNo };
+
+            var Query2 = from r in context.Rooms
+                         where r.RoomFree == "N"
+                         select new { RoomNo = r.RoomNo };
+
+            List<int> R = new List<int>();
+            List<string> C = new List<string>();
+            List<int> R1 = new List<int>();
+
+            foreach (var item in Query1)
+            {
+                R.Add(item.RoomNo);
+            }
+            foreach (var item in Query2)
+            {
+                R1.Add(item.RoomNo);
+            }
+
+            foreach (var item in Query)
+            {
+                C.Add(item.FirstName + " " + item.LastName);
+            }
+            Client_combo.DataSource = C;
+            Room_combo.DataSource = R;
+            RSearch_combo.DataSource = R1;
+            Payment_combo.SelectedIndex = 0;
         }
     }
 }

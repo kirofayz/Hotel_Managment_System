@@ -85,16 +85,23 @@ namespace Hotel_Managment_System.Controls
 
         private void CheckOut_Load(object sender, EventArgs e)
         {
+            
+             
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             DateTime currentDate = DateTime.Now.Date;
             HotelManagementSystemEntities context = new HotelManagementSystemEntities();
             var Query = (from d in context.Reservations
-                        join r in context.Rooms
-                        on d.RoomID equals r.RoomID
+                         join r in context.Rooms
+                         on d.RoomID equals r.RoomID
                          join c in context.Clients
                          on d.ClientID equals c.ClientID
-                        orderby r.RoomNo ascending
-                        where EntityFunctions.TruncateTime(d.CheckOutDate) == currentDate
-                         select new { Room = r.RoomNo , StayDuration = DbFunctions.DiffDays(d.CheckInDate, d.CheckOutDate) , Price = r.RoomPrice , GuestId = c.ClientID , GuestNme = c.firstName + " " + c.lastName }   ).Distinct();
+                         orderby r.RoomNo ascending
+                         where EntityFunctions.TruncateTime(d.CheckOutDate) == currentDate
+                         select new { Room = r.RoomNo, StayDuration = DbFunctions.DiffDays(d.CheckInDate, d.CheckOutDate), Price = r.RoomPrice, GuestId = c.ClientID, GuestNme = c.firstName + " " + c.lastName }).Distinct();
 
             List<int> R = new List<int>();
             foreach (var item in Query)
@@ -102,8 +109,6 @@ namespace Hotel_Managment_System.Controls
                 R.Add(item.Room);
             }
             Rooms_combo.DataSource = R;
-             
-
         }
     }
 }

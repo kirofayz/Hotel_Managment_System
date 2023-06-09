@@ -47,6 +47,7 @@ namespace Hotel_Managment_System.Forms
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageAddReservation = new System.Windows.Forms.TabPage();
+            this.Payment_combo = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePickerOut = new System.Windows.Forms.DateTimePicker();
@@ -59,9 +60,9 @@ namespace Hotel_Managment_System.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPageSearchReservation = new System.Windows.Forms.TabPage();
-            this.Payment_combo = new System.Windows.Forms.ComboBox();
-            this.RSearch_combo = new System.Windows.Forms.ComboBox();
             this.DGV_Show = new System.Windows.Forms.DataGridView();
+            this.RSearch_combo = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabPageUpdateReservation.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageAddReservation.SuspendLayout();
@@ -291,6 +292,7 @@ namespace Hotel_Managment_System.Forms
             // tabPageAddReservation
             // 
             this.tabPageAddReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageAddReservation.Controls.Add(this.button1);
             this.tabPageAddReservation.Controls.Add(this.Payment_combo);
             this.tabPageAddReservation.Controls.Add(this.label6);
             this.tabPageAddReservation.Controls.Add(this.label5);
@@ -311,6 +313,24 @@ namespace Hotel_Managment_System.Forms
             this.tabPageAddReservation.Size = new System.Drawing.Size(1159, 462);
             this.tabPageAddReservation.TabIndex = 0;
             this.tabPageAddReservation.Text = "Add Reservation";
+            // 
+            // Payment_combo
+            // 
+            this.Payment_combo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Payment_combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Payment_combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Payment_combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Payment_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Payment_combo.ForeColor = System.Drawing.Color.White;
+            this.Payment_combo.FormattingEnabled = true;
+            this.Payment_combo.Items.AddRange(new object[] {
+            "Visa",
+            "Cash"});
+            this.Payment_combo.Location = new System.Drawing.Point(109, 225);
+            this.Payment_combo.Margin = new System.Windows.Forms.Padding(4);
+            this.Payment_combo.Name = "Payment_combo";
+            this.Payment_combo.Size = new System.Drawing.Size(379, 33);
+            this.Payment_combo.TabIndex = 20;
             // 
             // label6
             // 
@@ -466,23 +486,21 @@ namespace Hotel_Managment_System.Forms
             this.tabPageSearchReservation.TabIndex = 1;
             this.tabPageSearchReservation.Text = "Search";
             // 
-            // Payment_combo
+            // DGV_Show
             // 
-            this.Payment_combo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Payment_combo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Payment_combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Payment_combo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Payment_combo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payment_combo.ForeColor = System.Drawing.Color.White;
-            this.Payment_combo.FormattingEnabled = true;
-            this.Payment_combo.Items.AddRange(new object[] {
-            "Visa",
-            "Cash"});
-            this.Payment_combo.Location = new System.Drawing.Point(109, 225);
-            this.Payment_combo.Margin = new System.Windows.Forms.Padding(4);
-            this.Payment_combo.Name = "Payment_combo";
-            this.Payment_combo.Size = new System.Drawing.Size(379, 33);
-            this.Payment_combo.TabIndex = 20;
+            this.DGV_Show.AllowUserToAddRows = false;
+            this.DGV_Show.AllowUserToDeleteRows = false;
+            this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Show.GridColor = System.Drawing.Color.Black;
+            this.DGV_Show.Location = new System.Drawing.Point(32, 174);
+            this.DGV_Show.Name = "DGV_Show";
+            this.DGV_Show.ReadOnly = true;
+            this.DGV_Show.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.DGV_Show.RowTemplate.Height = 24;
+            this.DGV_Show.Size = new System.Drawing.Size(1083, 235);
+            this.DGV_Show.TabIndex = 25;
+            this.DGV_Show.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellClick);
+            this.DGV_Show.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DGV_Show_CellFormatting);
             // 
             // RSearch_combo
             // 
@@ -500,21 +518,21 @@ namespace Hotel_Managment_System.Forms
             this.RSearch_combo.TabIndex = 24;
             this.RSearch_combo.SelectedIndexChanged += new System.EventHandler(this.RSearch_combo_SelectedIndexChanged);
             // 
-            // DGV_Show
+            // button1
             // 
-            this.DGV_Show.AllowUserToAddRows = false;
-            this.DGV_Show.AllowUserToDeleteRows = false;
-            this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Show.GridColor = System.Drawing.Color.Black;
-            this.DGV_Show.Location = new System.Drawing.Point(32, 174);
-            this.DGV_Show.Name = "DGV_Show";
-            this.DGV_Show.ReadOnly = true;
-            this.DGV_Show.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.DGV_Show.RowTemplate.Height = 24;
-            this.DGV_Show.Size = new System.Drawing.Size(1083, 235);
-            this.DGV_Show.TabIndex = 25;
-            this.DGV_Show.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellClick);
-            this.DGV_Show.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DGV_Show_CellFormatting);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(131)))), ((int)(((byte)(136)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(1024, 22);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 44);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Load";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UserControlReservation
             // 
@@ -575,5 +593,6 @@ namespace Hotel_Managment_System.Forms
         private System.Windows.Forms.ComboBox Payment_combo;
         private System.Windows.Forms.ComboBox RSearch_combo;
         private System.Windows.Forms.DataGridView DGV_Show;
+        private System.Windows.Forms.Button button1;
     }
 }

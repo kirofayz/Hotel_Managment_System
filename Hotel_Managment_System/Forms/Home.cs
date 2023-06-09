@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace Hotel_Managment_System.Forms
 {
+   
     public partial class Home : Form
     {
         public Home()
         {
             InitializeComponent();
-            
+            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
+
         }
         
         
@@ -50,7 +52,7 @@ namespace Hotel_Managment_System.Forms
         private void Home_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            Name_lbl.Text = Name;
+           // Name_lbl.Text = Name;
            
         }
 
