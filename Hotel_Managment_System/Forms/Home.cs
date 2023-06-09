@@ -15,8 +15,10 @@ namespace Hotel_Managment_System.Forms
         public Home()
         {
             InitializeComponent();
+            
         }
-       
+        
+        
         private void MovePanel(Control btn)
         {
             Pnl_Slide.Top = btn.Top;
@@ -49,6 +51,7 @@ namespace Hotel_Managment_System.Forms
         {
             timer1.Start();
             Name_lbl.Text = Name;
+           
         }
 
         private void Dashboard_btn_Click(object sender, EventArgs e)

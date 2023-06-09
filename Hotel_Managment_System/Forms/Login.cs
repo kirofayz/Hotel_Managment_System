@@ -76,13 +76,14 @@ namespace Hotel_Managment_System.Forms
                     Home H = new Home();
                    // this.Hide();
                     H.Name = UserName;
+                    Program.Username = UserName;
                     H.Show();
                     break;
                 }
-               else
+                else if(user.UserName != UserName && user.Password != Password)
                 {
                     Passwrong_pnl.Visible = true;
-                    break;
+                   
                 }
 
             }

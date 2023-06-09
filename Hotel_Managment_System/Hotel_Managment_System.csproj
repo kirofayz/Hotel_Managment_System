@@ -100,6 +100,12 @@
     <Compile Include="DataStorage.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CheckInReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CheckInReports.Designer.cs">
+      <DependentUpon>CheckInReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CheckOutReports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,12 @@
       <DependentUpon>Clients_rpt.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\daily_rpt.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -228,6 +240,9 @@
     <EmbeddedResource Include="Controls\UserControlClient.resx">
       <DependentUpon>UserControlClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CheckInReports.resx">
+      <DependentUpon>CheckInReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CheckOutReports.resx">
       <DependentUpon>CheckOutReports.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +284,10 @@
     <EmbeddedResource Include="Report\Clients_rpt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Clients_rpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\daily_rpt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
