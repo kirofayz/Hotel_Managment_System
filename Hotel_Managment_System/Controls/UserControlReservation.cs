@@ -12,6 +12,7 @@ namespace Hotel_Managment_System.Forms
 {
     public partial class UserControlReservation : UserControl
     {
+        string ID;
         public UserControlReservation()
         {
             InitializeComponent();
@@ -90,11 +91,14 @@ namespace Hotel_Managment_System.Forms
 
             // Insert Reservation
             Reservation R = new Reservation() { CheckInDate = Checkin, CheckOutDate = Checkout, PaymentMethod = Payment, UserID = User_ID, ClientID = Client_ID, RoomID = Room_ID };
-            var Query4 = context.Rooms.FirstOrDefault(ww => ww.RoomID == Room_ID);
-            Query4.RoomFree = "N";
             context.Reservations.Add(R);
             context.SaveChanges();
             MessageBox.Show("Added Successfully !!");
+
+            HotelManagementSystemEntities db = new HotelManagementSystemEntities();
+            var Query4 = db.Rooms.FirstOrDefault(ww => ww.RoomID == Room_ID);
+            Query4.RoomFree = "Y";
+            db.SaveChanges();
 
             int Reserve_no = 10;
             TimeSpan timeSpan = Checkout - Checkin ;
@@ -133,20 +137,7 @@ namespace Hotel_Managment_System.Forms
 
         private void tabControl1_Enter(object sender, EventArgs e)
         {
-            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
-            var Show_Reserve = from r in context.Reservations
-                               join c in context.Clients
-                               on r.ClientID equals c.ClientID
-                               join ro in context.Rooms
-                               on r.RoomID equals ro.RoomID
-                               select new { GuestName = c.firstName + " " + c.lastName, Room = ro.RoomNo, RoomType = ro.RoomType , CheckIn = r.CheckInDate , Checkout = r.CheckOutDate };
-            DGV_Show.DefaultCellStyle.ForeColor = Color.Black;
-            DGV_Show.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            foreach (DataGridViewColumn column in DGV_Show.Columns)
-            {
-                column.FillWeight = 1;
-            }
-            DGV_Show.DataSource = Show_Reserve.ToList();
+           
            
 
 
@@ -164,57 +155,102 @@ namespace Hotel_Managment_System.Forms
 
         private void RSearch_combo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selected = RSearch_combo.SelectedItem.ToString();
-            int s = int.Parse(selected);
-            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
-            var Show_Reserve = from r in context.Reservations
-                               join c in context.Clients
-                               on r.ClientID equals c.ClientID
-                               join ro in context.Rooms
-                               on r.RoomID equals ro.RoomID
-                               where ro.RoomNo == s
-                               select new { GuestName = c.firstName + " " + c.lastName, Room = ro.RoomNo, RoomType = ro.RoomType, CheckIn = r.CheckInDate, Checkout = r.CheckOutDate };
-            DGV_Show.DefaultCellStyle.ForeColor = Color.Black;
-            DGV_Show.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            DGV_Show.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            DGV_Show.DataSource = Show_Reserve.ToList();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             HotelManagementSystemEntities context = new HotelManagementSystemEntities();
+            HotelManagementSystemEntities context1 = new HotelManagementSystemEntities();
             var Query = from c in context.Clients
                         select new { FirstName = c.firstName, LastName = c.lastName };
 
-            var Query1 = from r in context.Rooms
-                         where r.RoomFree == "Y"
-                         select new { RoomNo = r.RoomNo };
-
-            var Query2 = from r in context.Rooms
+            var Query1 = from r in context1.Rooms
                          where r.RoomFree == "N"
-                         select new { RoomNo = r.RoomNo };
+                         select r.RoomNo;
 
-            List<int> R = new List<int>();
+
+            List<string> R = new List<string>();
             List<string> C = new List<string>();
-            List<int> R1 = new List<int>();
 
-            foreach (var item in Query1)
+            foreach (var room in Query1)
             {
-                R.Add(item.RoomNo);
+                R.Add(room.ToString());
             }
-            foreach (var item in Query2)
-            {
-                R1.Add(item.RoomNo);
-            }
-
+            
             foreach (var item in Query)
             {
                 C.Add(item.FirstName + " " + item.LastName);
             }
-            Client_combo.DataSource = C;
             Room_combo.DataSource = R;
-            RSearch_combo.DataSource = R1;
+            Client_combo.DataSource = C;
+           // Room_combo.DataSource = R;
+            
             Payment_combo.SelectedIndex = 0;
+        }
+
+        private void Search_Enter(object sender, EventArgs e)
+        {
+            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
+            var resv = from d in context.Reservations
+                             join c in context.Clients
+                              on d.ClientID equals c.ClientID
+                             join ro in context.Rooms
+                             on d.RoomID equals ro.RoomID
+                             join u in context.Users
+                             on d.ClientID equals u.UserID
+                             select new {ID = d.ReservationID ,GuestName = c.firstName + " " + c.lastName, Room = ro.RoomNo , Payment = d.PaymentMethod , CheckIn = d.CheckInDate, CheckOut = d.CheckOutDate, RoomType = ro.RoomType,  UserName = u.UserName, Role = u.Role };
+            
+            DGV_Search.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (DataGridViewColumn column in DGV_Search.Columns)
+            {
+                column.FillWeight = 1;
+            }
+            DGV_Search.DefaultCellStyle.ForeColor = Color.Black;
+            DGV_Search.DataSource = resv.ToList();
+            DGV_Search.Columns["ID"].Visible = false;
+
+        }
+
+        private void DGV_Search_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = DGV_Search.Rows[e.RowIndex];
+                ID = row.Cells[0].Value.ToString();
+                Name_txt.Text = row.Cells[1].Value.ToString();
+                Room_txt.Text = row.Cells[2].Value.ToString();
+                Payment_txt.Text = row.Cells[3].Value.ToString();
+                DTP_in.Value =(DateTime)row.Cells[4].Value;
+                DTP_out.Value = (DateTime)row.Cells[5].Value;
+
+                
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(ID);
+            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
+            Reservation reservation = context.Reservations.Where(r => r.ReservationID == id).FirstOrDefault();
+            reservation.CheckInDate = DTP_in.Value.Date;
+            reservation.CheckOutDate = DTP_out.Value.Date;
+            context.SaveChanges();
+            MessageBox.Show("Updated Successfully !!");
+
+
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(ID);
+            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
+            Reservation reservation = context.Reservations.Where(r => r.ReservationID == id).FirstOrDefault();
+            context.Reservations.Remove(reservation);
+            context.SaveChanges();
+            MessageBox.Show("Deleted Successfully !!");
+
         }
     }
 }

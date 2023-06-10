@@ -41,9 +41,9 @@ namespace Hotel_Managment_System.Controls
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(131)))), ((int)(((byte)(136)))));
             this.label1.Location = new System.Drawing.Point(44, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 36);
+            this.label1.Size = new System.Drawing.Size(132, 36);
             this.label1.TabIndex = 81;
-            this.label1.Text = "Dashboard :";
+            this.label1.Text = "Rooms :";
             // 
             // load_btn
             // 

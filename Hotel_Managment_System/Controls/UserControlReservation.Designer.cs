@@ -47,35 +47,40 @@ namespace Hotel_Managment_System.Forms
             this.Payment_combo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DTP_out = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.DTP_in = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.Search = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.DGV_Search = new System.Windows.Forms.DataGridView();
+            this.Name_txt = new System.Windows.Forms.TextBox();
+            this.Room_txt = new System.Windows.Forms.MaskedTextBox();
+            this.Payment_txt = new System.Windows.Forms.TextBox();
             this.tabPageUpdateReservation.SuspendLayout();
             this.tabPageAddReservation.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.Search.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Search)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPageUpdateReservation
             // 
             this.tabPageUpdateReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageUpdateReservation.Controls.Add(this.Payment_txt);
+            this.tabPageUpdateReservation.Controls.Add(this.Room_txt);
+            this.tabPageUpdateReservation.Controls.Add(this.Name_txt);
             this.tabPageUpdateReservation.Controls.Add(this.label10);
             this.tabPageUpdateReservation.Controls.Add(this.label11);
             this.tabPageUpdateReservation.Controls.Add(this.label12);
-            this.tabPageUpdateReservation.Controls.Add(this.comboBox1);
             this.tabPageUpdateReservation.Controls.Add(this.label7);
-            this.tabPageUpdateReservation.Controls.Add(this.dateTimePicker1);
+            this.tabPageUpdateReservation.Controls.Add(this.DTP_out);
             this.tabPageUpdateReservation.Controls.Add(this.label9);
-            this.tabPageUpdateReservation.Controls.Add(this.dateTimePicker2);
-            this.tabPageUpdateReservation.Controls.Add(this.comboBox2);
-            this.tabPageUpdateReservation.Controls.Add(this.comboBox3);
+            this.tabPageUpdateReservation.Controls.Add(this.DTP_in);
             this.tabPageUpdateReservation.Controls.Add(this.button2);
             this.tabPageUpdateReservation.Controls.Add(this.buttonCancel);
             this.tabPageUpdateReservation.Controls.Add(this.label8);
@@ -116,6 +121,7 @@ namespace Hotel_Managment_System.Forms
             this.buttonCancel.TabIndex = 32;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // tabPageAddReservation
             // 
@@ -320,6 +326,7 @@ namespace Hotel_Managment_System.Forms
             this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPageAddReservation);
             this.tabControl1.Controls.Add(this.tabPageUpdateReservation);
+            this.tabControl1.Controls.Add(this.Search);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.tabControl1.Location = new System.Drawing.Point(19, 13);
             this.tabControl1.Name = "tabControl1";
@@ -327,24 +334,6 @@ namespace Hotel_Managment_System.Forms
             this.tabControl1.Size = new System.Drawing.Size(1167, 492);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Enter += new System.EventHandler(this.tabControl1_Enter);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Visa",
-            "Cash"});
-            this.comboBox1.Location = new System.Drawing.Point(94, 202);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(379, 33);
-            this.comboBox1.TabIndex = 40;
             // 
             // label7
             // 
@@ -358,15 +347,15 @@ namespace Hotel_Managment_System.Forms
             this.label7.TabIndex = 39;
             this.label7.Text = "Out";
             // 
-            // dateTimePicker1
+            // DTP_out
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(604, 286);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(401, 30);
-            this.dateTimePicker1.TabIndex = 38;
+            this.DTP_out.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DTP_out.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTP_out.Location = new System.Drawing.Point(604, 286);
+            this.DTP_out.Margin = new System.Windows.Forms.Padding(4);
+            this.DTP_out.Name = "DTP_out";
+            this.DTP_out.Size = new System.Drawing.Size(401, 30);
+            this.DTP_out.TabIndex = 38;
             // 
             // label9
             // 
@@ -380,45 +369,15 @@ namespace Hotel_Managment_System.Forms
             this.label9.TabIndex = 37;
             this.label9.Text = "In";
             // 
-            // dateTimePicker2
+            // DTP_in
             // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(94, 286);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(379, 30);
-            this.dateTimePicker2.TabIndex = 36;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(604, 105);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(401, 33);
-            this.comboBox2.TabIndex = 35;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(94, 105);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(379, 33);
-            this.comboBox3.TabIndex = 34;
+            this.DTP_in.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DTP_in.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTP_in.Location = new System.Drawing.Point(94, 286);
+            this.DTP_in.Margin = new System.Windows.Forms.Padding(4);
+            this.DTP_in.Name = "DTP_in";
+            this.DTP_in.Size = new System.Drawing.Size(379, 30);
+            this.DTP_in.TabIndex = 36;
             // 
             // button2
             // 
@@ -434,6 +393,7 @@ namespace Hotel_Managment_System.Forms
             this.button2.TabIndex = 33;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label10
             // 
@@ -471,6 +431,78 @@ namespace Hotel_Managment_System.Forms
             this.label12.TabIndex = 41;
             this.label12.Text = "Client Name :";
             // 
+            // Search
+            // 
+            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Search.Controls.Add(this.DGV_Search);
+            this.Search.Controls.Add(this.label13);
+            this.Search.Location = new System.Drawing.Point(4, 4);
+            this.Search.Name = "Search";
+            this.Search.Padding = new System.Windows.Forms.Padding(3);
+            this.Search.Size = new System.Drawing.Size(1159, 462);
+            this.Search.TabIndex = 3;
+            this.Search.Text = "Search";
+            this.Search.Enter += new System.EventHandler(this.Search_Enter);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(131)))), ((int)(((byte)(136)))));
+            this.label13.Location = new System.Drawing.Point(7, 17);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(214, 25);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Search Reservation :";
+            // 
+            // DGV_Search
+            // 
+            this.DGV_Search.AllowUserToAddRows = false;
+            this.DGV_Search.AllowUserToDeleteRows = false;
+            this.DGV_Search.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Search.Location = new System.Drawing.Point(12, 59);
+            this.DGV_Search.Name = "DGV_Search";
+            this.DGV_Search.ReadOnly = true;
+            this.DGV_Search.RowHeadersWidth = 51;
+            this.DGV_Search.RowTemplate.Height = 24;
+            this.DGV_Search.Size = new System.Drawing.Size(1131, 382);
+            this.DGV_Search.TabIndex = 33;
+            this.DGV_Search.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Search_CellClick);
+            // 
+            // Name_txt
+            // 
+            this.Name_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Name_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Name_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Name_txt.ForeColor = System.Drawing.Color.White;
+            this.Name_txt.Location = new System.Drawing.Point(94, 111);
+            this.Name_txt.Name = "Name_txt";
+            this.Name_txt.Size = new System.Drawing.Size(379, 23);
+            this.Name_txt.TabIndex = 44;
+            // 
+            // Room_txt
+            // 
+            this.Room_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Room_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Room_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Room_txt.ForeColor = System.Drawing.Color.White;
+            this.Room_txt.Location = new System.Drawing.Point(604, 111);
+            this.Room_txt.Name = "Room_txt";
+            this.Room_txt.Size = new System.Drawing.Size(401, 23);
+            this.Room_txt.TabIndex = 45;
+            // 
+            // Payment_txt
+            // 
+            this.Payment_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Payment_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Payment_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Payment_txt.ForeColor = System.Drawing.Color.White;
+            this.Payment_txt.Location = new System.Drawing.Point(94, 209);
+            this.Payment_txt.Name = "Payment_txt";
+            this.Payment_txt.Size = new System.Drawing.Size(379, 23);
+            this.Payment_txt.TabIndex = 46;
+            // 
             // UserControlReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -488,6 +520,9 @@ namespace Hotel_Managment_System.Forms
             this.tabPageAddReservation.ResumeLayout(false);
             this.tabPageAddReservation.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.Search.ResumeLayout(false);
+            this.Search.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Search)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,13 +533,10 @@ namespace Hotel_Managment_System.Forms
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DTP_out;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.DateTimePicker DTP_in;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label8;
@@ -523,5 +555,11 @@ namespace Hotel_Managment_System.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage Search;
+        private System.Windows.Forms.DataGridView DGV_Search;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox Payment_txt;
+        private System.Windows.Forms.MaskedTextBox Room_txt;
+        private System.Windows.Forms.TextBox Name_txt;
     }
 }
