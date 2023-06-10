@@ -14,11 +14,7 @@ namespace HotelManagement.test
         [TestMethod]
         public void TestLogin()
         {
-
-
             var page = new SignIn();
-           
-
            var user= page.UserLogin("gemy","123");
             Assert.IsNotNull(user);
 
