@@ -21,7 +21,7 @@ namespace Hotel_Managment_System.Forms
         public string Report_txt { get; set; }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

@@ -73,6 +73,15 @@ namespace Hotel_Managment_System.Controls
             context.Reservations.Remove(reserve);
             context.SaveChanges();
 
+            // Update Status of Room Free
+            int se = int.Parse(selectedRoom);
+            var Room_status = context.Rooms.FirstOrDefault(ww => ww.RoomNo == se);
+            Room_status.RoomFree = "Y";
+            context.SaveChanges();
+                              
+
+
+
             Forms.CheckOutReports cr = new Forms.CheckOutReports();
             cr.RoomNo = RoomNo;
             cr.Stay = Stay;
