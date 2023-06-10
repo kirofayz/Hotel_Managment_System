@@ -20,7 +20,8 @@ namespace Hotel_Managment_System.Controls
             InitializeComponent();
             
         }
-       
+
+        [Obsolete]
         private void Addbtn_Click(object sender, EventArgs e)
         {
             string selectedRoom = Rooms_combo.SelectedItem.ToString();

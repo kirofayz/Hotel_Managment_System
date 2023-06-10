@@ -13,7 +13,7 @@ namespace Hotel_Managment_System
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class HotelManagementSystemEntities : DbContext
+    public partial class HotelManagementSystemEntities : DbContext//, IHotelManagementSystemEntities
     {
         public HotelManagementSystemEntities()
             : base("name=HotelManagementSystemEntities")
@@ -31,5 +31,15 @@ namespace Hotel_Managment_System
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<DataStorage> DataStorages { get; set; }
+    }
+
+    internal interface IHotelManagementSystemEntities
+    {
+          DbSet<Client> Clients { get; set; }
+          DbSet<Reservation> Reservations { get; set; }
+          DbSet<Room> Rooms { get; set; }
+          DbSet<sysdiagram> sysdiagrams { get; set; }
+          DbSet<User> Users { get; set; }
+          DbSet<DataStorage> DataStorages { get; set; }
     }
 }

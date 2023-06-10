@@ -134,7 +134,7 @@ namespace Hotel_Managment_System.Forms
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(97, 345);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(353, 53);
+            this.label6.Size = new System.Drawing.Size(282, 42);
             this.label6.TabIndex = 0;
             this.label6.Text = "Fleet Club Hotel";
             // 
@@ -154,7 +154,7 @@ namespace Hotel_Managment_System.Forms
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(603, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 21);
+            this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "User Name";
             // 
@@ -166,7 +166,7 @@ namespace Hotel_Managment_System.Forms
             this.UserName_txt.ForeColor = System.Drawing.Color.Gray;
             this.UserName_txt.Location = new System.Drawing.Point(14, 13);
             this.UserName_txt.Name = "UserName_txt";
-            this.UserName_txt.Size = new System.Drawing.Size(472, 25);
+            this.UserName_txt.Size = new System.Drawing.Size(472, 20);
             this.UserName_txt.TabIndex = 4;
             this.UserName_txt.Text = "Enter Your UserName";
             this.UserName_txt.Click += new System.EventHandler(this.UserName_txt_Click);
@@ -234,7 +234,7 @@ namespace Hotel_Managment_System.Forms
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(96)))));
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(232, 18);
+            this.label4.Size = new System.Drawing.Size(187, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Invalid UserName or Password";
             // 
@@ -264,7 +264,7 @@ namespace Hotel_Managment_System.Forms
             this.Password_txt.ForeColor = System.Drawing.Color.Gray;
             this.Password_txt.Location = new System.Drawing.Point(14, 13);
             this.Password_txt.Name = "Password_txt";
-            this.Password_txt.Size = new System.Drawing.Size(472, 25);
+            this.Password_txt.Size = new System.Drawing.Size(472, 20);
             this.Password_txt.TabIndex = 4;
             this.Password_txt.Text = "123";
             this.Password_txt.UseSystemPasswordChar = true;
@@ -277,7 +277,7 @@ namespace Hotel_Managment_System.Forms
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(603, 359);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 21);
+            this.label5.Size = new System.Drawing.Size(71, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Password";
             // 
@@ -321,7 +321,7 @@ namespace Hotel_Managment_System.Forms
             // 
             // SignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1345, 613);

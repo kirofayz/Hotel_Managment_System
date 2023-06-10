@@ -175,9 +175,14 @@ namespace Hotel_Managment_System.Forms
                 RoomFree = "N";
             }
             Room room = new Room() { RoomNo = int.Parse(RoomNo), RoomPrice = int.Parse(RoomPrice), RoomFree = RoomFree, RoomType = RoomType };
+            AddRoom(room);
+            MessageBox.Show("Added Successfully");
+        }
+
+        public void AddRoom(Room room)
+        {
             context.Rooms.Add(room);
             context.SaveChanges();
-            MessageBox.Show("Added Successfully");
         }
 
         private void label3_Click(object sender, EventArgs e)

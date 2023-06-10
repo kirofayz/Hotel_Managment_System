@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Hotel_Managment_System.Forms
 {
-   
+
     public partial class Home : Form
     {
         public Home()
@@ -19,8 +19,8 @@ namespace Hotel_Managment_System.Forms
             HotelManagementSystemEntities context = new HotelManagementSystemEntities();
 
         }
-        
-        
+
+
         private void MovePanel(Control btn)
         {
             Pnl_Slide.Top = btn.Top;
@@ -33,10 +33,10 @@ namespace Hotel_Managment_System.Forms
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
-            
+
+
             DialogResult result = MessageBox.Show("Are You Want to Log Out ?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(DialogResult.Yes == result)
+            if (DialogResult.Yes == result)
             {
                 timer1.Stop();
                 this.Close();
@@ -53,13 +53,13 @@ namespace Hotel_Managment_System.Forms
         {
             timer1.Start();
             Name_lbl.Text = Name;
-           
+
         }
 
         private void Dashboard_btn_Click(object sender, EventArgs e)
         {
             MovePanel(Dashboard_btn);
-            
+
         }
 
         private void Client_btn_Click(object sender, EventArgs e)
@@ -150,5 +150,36 @@ namespace Hotel_Managment_System.Forms
         {
 
         }
+
+        private void change(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.jpg, *.png, *.bmp)|*.jpg;*.png;*.bmp";
+            openFileDialog.Title = "Select Logo Image";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Remove the existing image
+                pictureBox3.Image = null;
+
+                // Load and assign the new image
+                try
+                {
+                    Image newLogo = Image.FromFile(openFileDialog.FileName);
+                    pictureBox3.Image?.Dispose(); // Dispose of the previous image, if any
+                    pictureBox3.Image = new Bitmap(newLogo);
+                }
+                catch (Exception ex)
+                {
+                    // Handle any exceptions that may occur during image loading
+                    MessageBox.Show("Error loading the image: " + ex.Message, "Image Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        }
+
+       
     }
-}
+
+

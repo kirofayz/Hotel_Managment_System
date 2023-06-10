@@ -24,15 +24,27 @@ namespace Hotel_Managment_System.Controls
             var LastName = LName_txt.Text;
             var Phone = Phone_txt.Text;
             var Address = Address_txt.Text;
-            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
-            Client client = new Client() { firstName = FirstName, lastName = LastName, phone = Phone, Address = Address };
-            context.Clients.Add(client);
-            context.SaveChanges();
+            AddClient(new Client {
+                Address = Address,
+                firstName = FirstName,
+                lastName = LastName,
+                phone = Phone,
+
+
+
+            });
             MessageBox.Show("Added Successfully !!");
             FName_txt.Text = "";
             LName_txt.Text = "";
             Phone_txt.Text = "";
             Address_txt.Text = "";
+        }
+
+        public  void AddClient(Client client)
+        {
+            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
+            context.Clients.Add(client);
+            context.SaveChanges();
         }
 
         private void tabPageSearchClient_Enter(object sender, EventArgs e)

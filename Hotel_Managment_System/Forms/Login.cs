@@ -66,29 +66,51 @@ namespace Hotel_Managment_System.Forms
         {
             string UserName = UserName_txt.Text;
             string Password = Password_txt.Text;
-            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
-            var Query = from u in context.Users
-                        select u;
-            foreach (var user in Query)
+            User isUserExisted = UserLogin(UserName, Password);
+            if (isUserExisted != null)
             {
-                if(user.UserName == UserName && user.Password == Password)
-                {
-                    Home H = new Home();
-                   // this.Hide();
-                    H.Name = UserName;
-                    Program.Username = UserName;
-                    H.Show();
-                    break;
-                }
-                else if(user.UserName != UserName && user.Password != Password)
-                {
-                    Passwrong_pnl.Visible = true;
-                   
-                }
+                Home H = new Home();
+                // this.Hide();
+                H.Name = UserName;
+                Program.Username = UserName;
+                H.Show();
+
 
             }
-            
+            else
+                Passwrong_pnl.Visible = true;
 
+
+
+            //var Query = from u in context.Users
+            //            select u;
+            //foreach (var user in Query)
+            //{
+            //    if(user.UserName == UserName && user.Password == Password)
+            //    {
+            //        Home H = new Home();
+            //       // this.Hide();
+            //        H.Name = UserName;
+            //        Program.Username = UserName;
+            //        H.Show();
+            //        break;
+            //    }
+            //    else if(user.UserName != UserName && user.Password != Password)
+            //    {
+            //        Passwrong_pnl.Visible = true;
+
+            //    }
+
+            //}
+
+
+        }
+
+        public  User UserLogin(string UserName, string Password)
+        {
+            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
+            var isUserExisted = context.Users.FirstOrDefault(a => a.UserName == UserName && a.Password == Password);
+            return isUserExisted;
         }
 
         private void SignIn_Load(object sender, EventArgs e)

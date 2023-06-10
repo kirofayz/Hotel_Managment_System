@@ -42,7 +42,6 @@ namespace Hotel_Managment_System.Forms
             this.Dashboard_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Name_lbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,20 +50,21 @@ namespace Hotel_Managment_System.Forms
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.userControlClient1 = new Hotel_Managment_System.Controls.UserControlClient();
             this.checkOut1 = new Hotel_Managment_System.Controls.CheckOut();
             this.userControlReservation1 = new Hotel_Managment_System.Forms.UserControlReservation();
             this.userControlRooms1 = new Hotel_Managment_System.Forms.UserControlRooms();
             this.reports1 = new Hotel_Managment_System.Controls.Reports();
             this.settings1 = new Hotel_Managment_System.Controls.Settings();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.userControlClient1 = new Hotel_Managment_System.Controls.UserControlClient();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -233,19 +233,9 @@ namespace Hotel_Managment_System.Forms
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(41, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(235, 32);
+            this.label6.Size = new System.Drawing.Size(184, 26);
             this.label6.TabIndex = 2;
             this.label6.Text = "Fleet Club Hotel";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(47, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(176, 115);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
             // 
             // panel3
             // 
@@ -268,7 +258,7 @@ namespace Hotel_Managment_System.Forms
             this.Name_lbl.ForeColor = System.Drawing.Color.White;
             this.Name_lbl.Location = new System.Drawing.Point(154, 142);
             this.Name_lbl.Name = "Name_lbl";
-            this.Name_lbl.Size = new System.Drawing.Size(26, 29);
+            this.Name_lbl.Size = new System.Drawing.Size(21, 24);
             this.Name_lbl.TabIndex = 5;
             this.Name_lbl.Text = "?";
             // 
@@ -280,7 +270,7 @@ namespace Hotel_Managment_System.Forms
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(19, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 29);
+            this.label1.Size = new System.Drawing.Size(110, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Welcome :";
             // 
@@ -305,7 +295,7 @@ namespace Hotel_Managment_System.Forms
             this.labelDateTime.ForeColor = System.Drawing.Color.White;
             this.labelDateTime.Location = new System.Drawing.Point(10, 62);
             this.labelDateTime.Name = "labelDateTime";
-            this.labelDateTime.Size = new System.Drawing.Size(32, 32);
+            this.labelDateTime.Size = new System.Drawing.Size(25, 26);
             this.labelDateTime.TabIndex = 3;
             this.labelDateTime.Text = "?";
             // 
@@ -321,7 +311,7 @@ namespace Hotel_Managment_System.Forms
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(1332, 62);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(70, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(61, 17);
             this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "LogOut";
@@ -355,11 +345,40 @@ namespace Hotel_Managment_System.Forms
             this.panel6.TabIndex = 2;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(47, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(176, 115);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+           
+            this.pictureBox3.DoubleClick += new System.EventHandler(this.change);
+            // 
+            // userControlClient1
+            // 
+            this.userControlClient1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.userControlClient1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlClient1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlClient1.Location = new System.Drawing.Point(0, 0);
+            this.userControlClient1.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlClient1.Name = "userControlClient1";
+            this.userControlClient1.Size = new System.Drawing.Size(1415, 564);
+            this.userControlClient1.TabIndex = 5;
+            this.userControlClient1.Visible = false;
+            // 
             // checkOut1
             // 
             this.checkOut1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.checkOut1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkOut1.Location = new System.Drawing.Point(0, 0);
+            this.checkOut1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkOut1.Name = "checkOut1";
             this.checkOut1.Size = new System.Drawing.Size(1415, 564);
             this.checkOut1.TabIndex = 4;
@@ -411,23 +430,9 @@ namespace Hotel_Managment_System.Forms
             this.settings1.TabIndex = 0;
             this.settings1.Visible = false;
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // userControlClient1
-            // 
-            this.userControlClient1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.userControlClient1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlClient1.Location = new System.Drawing.Point(0, 0);
-            this.userControlClient1.Name = "userControlClient1";
-            this.userControlClient1.Size = new System.Drawing.Size(1415, 564);
-            this.userControlClient1.TabIndex = 5;
-            this.userControlClient1.Visible = false;
-            // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1694, 757);
@@ -444,13 +449,13 @@ namespace Hotel_Managment_System.Forms
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -463,7 +468,6 @@ namespace Hotel_Managment_System.Forms
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelDateTime;
@@ -484,5 +488,6 @@ namespace Hotel_Managment_System.Forms
         private System.Windows.Forms.Button Checkout_btn;
         private Controls.CheckOut checkOut1;
         private Controls.UserControlClient userControlClient1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
