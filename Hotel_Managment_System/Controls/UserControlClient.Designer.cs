@@ -455,6 +455,7 @@ namespace Hotel_Managment_System.Controls
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControlClient";
             this.Size = new System.Drawing.Size(1378, 635);
+            this.Load += new System.EventHandler(this.UserControlClient_Load);
             this.tabControlClient.ResumeLayout(false);
             this.tabPageAddClient.ResumeLayout(false);
             this.tabPageAddClient.PerformLayout();

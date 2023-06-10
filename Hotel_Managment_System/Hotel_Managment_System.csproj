@@ -73,6 +73,12 @@
     <Compile Include="Controls\CheckOut.Designer.cs">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Reports.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     </Compile>
     <Compile Include="Forms\ClientReports.Designer.cs">
       <DependentUpon>ClientReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dash.Designer.cs">
+      <DependentUpon>Dash.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
@@ -228,6 +240,9 @@
     <EmbeddedResource Include="Controls\CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ClientReports.resx">
       <DependentUpon>ClientReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dash.resx">
+      <DependentUpon>Dash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

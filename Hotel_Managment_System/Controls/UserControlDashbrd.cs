@@ -347,5 +347,10 @@ namespace Hotel_Managment_System.Controls
             }
         }
         #endregion
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

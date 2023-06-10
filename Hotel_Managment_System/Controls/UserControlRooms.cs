@@ -40,6 +40,8 @@ namespace Hotel_Managment_System.Forms
             Room room = context.Rooms.Where(u => u.RoomID == xId).FirstOrDefault();
             context.Rooms.Remove(room);
             context.SaveChanges();
+            MessageBox.Show("Deleted Successfully !!");
+
         }
 
         private void txtBoxPhoneNo2_TextChanged(object sender, EventArgs e)
@@ -174,7 +176,9 @@ namespace Hotel_Managment_System.Forms
             {
                 RoomFree = "N";
             }
-            Room room = new Room() { RoomNo = int.Parse(RoomNo), RoomPrice = int.Parse(RoomPrice), RoomFree = RoomFree, RoomType = RoomType };
+            int no = int.Parse(RoomNo);
+            int cost = int.Parse(RoomPrice);
+            Room room = new Room() { RoomNo = no , RoomPrice = cost , RoomFree = RoomFree, RoomType = RoomType };
             context.Rooms.Add(room);
             context.SaveChanges();
             MessageBox.Show("Added Successfully");
@@ -199,6 +203,11 @@ namespace Hotel_Managment_System.Forms
         {
             var Show_user = from u in context.Rooms
                             select new { ID = u.RoomID, RoomNnmber=u.RoomNo,RoomType= u.RoomType, RoomPrice=u.RoomPrice, RoomFree=u.RoomFree };
+            dataGridViewRoom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (DataGridViewColumn column in dataGridViewRoom.Columns)
+            {
+                column.FillWeight = 1;
+            }
             dataGridViewRoom.DataSource = Show_user.ToList();
             dataGridViewRoom.Columns["ID"].Visible = false;
         }
@@ -210,7 +219,15 @@ namespace Hotel_Managment_System.Forms
                 DataGridViewRow row = dataGridViewRoom.Rows[e.RowIndex];
                 Id = row.Cells[0].Value.ToString();
                 textBoxRoomNo1.Text = row.Cells[1].Value.ToString();
-                comboBoxRoomType1.SelectedItem = row.Cells[2].Value.ToString();
+                if(row.Cells[2].Value.ToString() == "Single")
+                {
+                    comboBoxRoomType1.SelectedIndex = 0;
+                }
+               else if (row.Cells[2].Value.ToString() == "Double")
+                {
+                    comboBoxRoomType1.SelectedIndex = 1;
+                }
+
                 textBoxRoomPrice1.Text = row.Cells[3].Value.ToString();
                 var check = row.Cells[4].Value.ToString();
                 if (check == "Y")
@@ -232,11 +249,13 @@ namespace Hotel_Managment_System.Forms
             {
                 RoomFree = "Y";
             }
-            else if (radioButtonNo1.Checked)
+            if (radioButtonNo1.Checked)
             {
                 RoomFree = "N";
             }
+            room.RoomFree = RoomFree;
             context.SaveChanges();
+            MessageBox.Show("Updated Successfully !!");
         }
 
 

@@ -109,5 +109,10 @@ namespace Hotel_Managment_System.Controls
             Phone_txt1.Text = "";
             Address_txt1.Text = "";
         }
+
+        private void UserControlClient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,11 +18,12 @@ namespace Hotel_Managment_System
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(new Forms.SignIn());
+           // Application.Run(new Forms.Load());
             Application.Run(new Forms.Home());
-            //Application.Run(new Forms.ReportsForm());
+         
+           // Application.Run(new Forms.Dash());
 
-            
-    }
+
+        }
     }
 }
