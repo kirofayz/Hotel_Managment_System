@@ -33,6 +33,13 @@ namespace Hotel_Managment_System.Forms
 
         }
 
+        public void TestAddResrv() 
+        {
+        }
+
+
+
+
         private void add_btn_Click(object sender, EventArgs e)
         {
             HotelManagementSystemEntities context = new HotelManagementSystemEntities();

@@ -46,6 +46,12 @@ namespace Hotel_Managment_System.Controls
             context.Clients.Add(client);
             context.SaveChanges();
         }
+        public void DeleteClient(Client client1)
+        {
+            HotelManagementSystemEntities context = new HotelManagementSystemEntities();
+            context.Clients.Add(client1);
+            context.SaveChanges();
+        }
 
         private void tabPageSearchClient_Enter(object sender, EventArgs e)
         {

@@ -19,7 +19,7 @@ namespace HotelManagement.test
             var page = new SignIn();
            
 
-           var user= page.UserLogin("gemy","123");
+           var user= page.UserLogin("Gemy","345");
             Assert.IsNotNull(user);
 
 

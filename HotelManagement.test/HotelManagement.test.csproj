@@ -58,6 +58,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adduser.cs" />
     <Compile Include="LoginPageTest.cs" />
     <Compile Include="RoomPageTest.cs" />
     <Compile Include="DbMock.cs" />

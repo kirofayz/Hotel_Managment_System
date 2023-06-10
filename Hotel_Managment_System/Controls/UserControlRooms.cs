@@ -29,6 +29,13 @@ namespace Hotel_Managment_System.Forms
 
         }
 
+        public void DeleteRoom(Room room1)
+        {
+            context.Rooms.Add(room1);
+            context.SaveChanges();
+
+        }
+
         private void comboBoxType2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -184,6 +191,7 @@ namespace Hotel_Managment_System.Forms
             context.Rooms.Add(room);
             context.SaveChanges();
         }
+      
 
         private void label3_Click(object sender, EventArgs e)
         {

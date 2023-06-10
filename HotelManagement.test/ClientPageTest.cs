@@ -36,5 +36,32 @@ namespace HotelManagement.test
             
 
         }
+        [TestMethod]
+        public void TestDeleteClient()
+        {
+
+
+            var page = new UserControlClient();
+            var client1 = new Client
+            {
+                Address = "kahsua",
+                firstName = "asghgas",
+                lastName = "ABhgsh",
+                phone = "ABHSAGJHS",
+
+            };
+
+            page.AddClient(client1);
+
+
+            var context1 = new HotelManagementSystemEntities();
+            var clients = context1.Clients.ToList();
+            Assert.IsTrue(clients.Any(a => a.ClientID == client1.ClientID));
+
+
+
+
+        }
+
     }
 }
