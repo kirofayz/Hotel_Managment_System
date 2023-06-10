@@ -97,6 +97,12 @@
     <Compile Include="Controls\UserControlClient.Designer.cs">
       <DependentUpon>UserControlClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UserControlDashbrd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserControlDashbrd.Designer.cs">
+      <DependentUpon>UserControlDashbrd.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataStorage.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UserControlClient.resx">
       <DependentUpon>UserControlClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserControlDashbrd.resx">
+      <DependentUpon>UserControlDashbrd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CheckInReports.resx">
       <DependentUpon>CheckInReports.cs</DependentUpon>
