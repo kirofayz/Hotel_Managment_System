@@ -32,6 +32,8 @@ namespace Hotel_Managment_System.Forms
             this.BtnDelete = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.UpdateAndDeleteRoomTab = new System.Windows.Forms.TabPage();
+            this.textBoxRoomPrice1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.comboBoxRoomType1 = new System.Windows.Forms.ComboBox();
             this.textBoxRoomNo1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@ namespace Hotel_Managment_System.Forms
             this.RoomPrice_txt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.textBoxRoomPrice1 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.UpdateAndDeleteRoomTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoom)).BeginInit();
             this.SearchNameTab.SuspendLayout();
@@ -119,16 +119,40 @@ namespace Hotel_Managment_System.Forms
             this.UpdateAndDeleteRoomTab.Text = "Update and Delete Room ";
             this.UpdateAndDeleteRoomTab.Click += new System.EventHandler(this.UpdateAndDeleteRoomTab_Click);
             // 
+            // textBoxRoomPrice1
+            // 
+            this.textBoxRoomPrice1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.textBoxRoomPrice1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxRoomPrice1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRoomPrice1.ForeColor = System.Drawing.Color.White;
+            this.textBoxRoomPrice1.Location = new System.Drawing.Point(763, 168);
+            this.textBoxRoomPrice1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxRoomPrice1.Name = "textBoxRoomPrice1";
+            this.textBoxRoomPrice1.Size = new System.Drawing.Size(280, 30);
+            this.textBoxRoomPrice1.TabIndex = 51;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(758, 101);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(207, 25);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "Room Price :            ";
+            // 
             // comboBoxRoomType1
             // 
             this.comboBoxRoomType1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.comboBoxRoomType1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxRoomType1.ForeColor = System.Drawing.Color.White;
             this.comboBoxRoomType1.FormattingEnabled = true;
             this.comboBoxRoomType1.Items.AddRange(new object[] {
             "Single ",
-            "Double ",
-            "Family",
-            "Suit"});
+            "Double"});
             this.comboBoxRoomType1.Location = new System.Drawing.Point(115, 168);
             this.comboBoxRoomType1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxRoomType1.Name = "comboBoxRoomType1";
@@ -140,6 +164,7 @@ namespace Hotel_Managment_System.Forms
             this.textBoxRoomNo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBoxRoomNo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRoomNo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRoomNo1.ForeColor = System.Drawing.Color.White;
             this.textBoxRoomNo1.Location = new System.Drawing.Point(420, 168);
             this.textBoxRoomNo1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxRoomNo1.Name = "textBoxRoomNo1";
@@ -303,12 +328,11 @@ namespace Hotel_Managment_System.Forms
             // 
             this.comboBoxType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.comboBoxType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxType.ForeColor = System.Drawing.Color.White;
             this.comboBoxType.FormattingEnabled = true;
             this.comboBoxType.Items.AddRange(new object[] {
             "Single ",
-            "Double ",
-            "Family",
-            "Suit"});
+            "Double"});
             this.comboBoxType.Location = new System.Drawing.Point(110, 150);
             this.comboBoxType.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxType.Name = "comboBoxType";
@@ -321,6 +345,7 @@ namespace Hotel_Managment_System.Forms
             this.RoomNo_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.RoomNo_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RoomNo_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomNo_txt.ForeColor = System.Drawing.Color.White;
             this.RoomNo_txt.Location = new System.Drawing.Point(449, 151);
             this.RoomNo_txt.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.RoomNo_txt.Name = "RoomNo_txt";
@@ -458,6 +483,7 @@ namespace Hotel_Managment_System.Forms
             this.RoomPrice_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.RoomPrice_txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RoomPrice_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomPrice_txt.ForeColor = System.Drawing.Color.White;
             this.RoomPrice_txt.Location = new System.Drawing.Point(803, 151);
             this.RoomPrice_txt.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.RoomPrice_txt.Name = "RoomPrice_txt";
@@ -490,30 +516,6 @@ namespace Hotel_Managment_System.Forms
             this.tabControl1.Size = new System.Drawing.Size(1167, 492);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            // 
-            // textBoxRoomPrice1
-            // 
-            this.textBoxRoomPrice1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.textBoxRoomPrice1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxRoomPrice1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRoomPrice1.Location = new System.Drawing.Point(763, 168);
-            this.textBoxRoomPrice1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxRoomPrice1.Name = "textBoxRoomPrice1";
-            this.textBoxRoomPrice1.Size = new System.Drawing.Size(280, 30);
-            this.textBoxRoomPrice1.TabIndex = 51;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(758, 101);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(207, 25);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "Room Price :            ";
             // 
             // UserControlRooms
             // 
